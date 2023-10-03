@@ -159,6 +159,7 @@ const next = async () => {
 }
 
 const getHighlightWord = (targetSentence, index, otherIndexes) => {
+  index = index - 1;
   let sentence = targetSentence.split(" ");
   let formattedSentence = ""
   for (let i = 0; i < sentence.length; i++) {
@@ -167,7 +168,7 @@ const getHighlightWord = (targetSentence, index, otherIndexes) => {
     } else {
       let found = 0;
       for (let k = 0; k < otherIndexes.length; k++) {
-        if (otherIndexes[k] == i) {
+        if (otherIndexes[k]-1 == i) {
           found = 1
           break;
         }
@@ -222,6 +223,7 @@ const saveResponses = () => {
   dataToSave.timestamp = serverTimestamp();
   let rtdbRef = child(dbRef(getDatabase()), "/data/" + store.pid);
   push(rtdbRef, dataToSave);
+  allResponses.value = [];
 }
 
 const progress = computed(()=>(store.index+1) + "/" + store.list.length);
