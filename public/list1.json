@@ -1,0 +1,54 @@
+[
+    {
+      "trialID": 1,
+      "image": "sauce_many_discrete.png",
+      "dialogueTurn1": "I made sandwiches, are you having one?",
+      "dialogueTurn2": "Yeah, thanks.",
+      "dialogueTurn3": "If you'd like a sauce on it, we have so many. They're on the counter if you want to take a look.",
+      "targetSentence": "well I'm craving something spicy and the buffalo sauce looks tasty",
+      "audio": "sauce_L+H.mp3",
+      "targetWord1": 2,
+      "targetWord2": 3,
+      "targetWord3": 7,
+      "targetWord4": 9
+    },
+    {
+      "trialID": 2,
+      "image": "puzzle_2.png",
+      "dialogueTurn1": "Are you stumped? You look like you're really concentrating.",
+      "dialogueTurn2": "I'm just looking for more pieces that go in this area.",
+      "dialogueTurn3": "Do you want either of the pieces in my hand?",
+      "targetSentence": "well I'm working on a tree and the triangular one might fit here",
+      "audio": "puzzle_L+H.mp3",
+      "targetWord1": 5,
+      "targetWord2": 7,
+      "targetWord3": 8,
+      "targetWord4": 11
+    },
+    {
+      "trialID": 3,
+      "image": "pizza_3.png",
+      "dialogueTurn1": "We're next in line, do you know what you want?",
+      "dialogueTurn2": "Pizza by the slice, but I'm still deciding what kind.",
+      "dialogueTurn3": "We came at the right time, then; they still have several to choose from. The cheese slice looks freshest, but there's also a mushroom slice, which I know you'd love.",
+      "targetSentence": "well I'm in the mood for something with meat and the pepperoni slice looks tasty",
+      "audio": "pizza_L+H.mp3",
+      "targetWord1": 1,
+      "targetWord2": 4,
+      "targetWord3": 11,
+      "targetWord4": 14
+    },
+    {
+      "trialID": 4,
+      "image": "yarn_many_indiscrete.png",
+      "dialogueTurn1": "Can I help you find anything today?",
+      "dialogueTurn2": "Yes, I'm looking for a bulky weight yarn to crochet a blanket with.",
+      "dialogueTurn3": "You're in luck, we have so many bulky weight yarns right now. They're all 100% acrylic fibers. Do you like any of these?",
+      "targetSentence": "well I'm looking for a warm color and the orange yarn would be perfect",
+      "audio": "yarn_L+H.mp3",
+      "targetWord1": 2,
+      "targetWord2": 6,
+      "targetWord3": 9,
+      "targetWord4": 11
+    }
+  ]
