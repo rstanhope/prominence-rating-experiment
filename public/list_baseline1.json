@@ -50,10 +50,10 @@
   },
   {
     "trialID": "filler12",
-    "targetSentence": "most of it is from the eighties or later but the stamp with the fish is from nineteen fifty-six",
+    "targetSentence": "most of it is from the eighties but the stamp with the fish is from nineteen fifty-six",
     "audio": "stamps.mp3",
-    "targetWord1": 9,
-    "targetWord2": 15
+    "targetWord1": 7,
+    "targetWord2": 13
   },
   {
     "trialID": "filler2",
