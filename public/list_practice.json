@@ -1,0 +1,9 @@
+[
+  {
+    "trialID": "practice",
+    "targetSentence": "some sentence here",
+    "audio": "sound_file_here.mp3",
+    "targetWord1": 1,
+    "targetWord2": 2
+  }
+]
