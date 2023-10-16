@@ -2,12 +2,13 @@
   <v-container>
     <h1>Consent to Participate in Research</h1>
     <p class="mt-5">
-      <strong>Title of Research Study:</strong> Prominence Rating
+      <strong>Title of Research Study:</strong> Contextual Effects on Prominence Perception
     </p>
     <p><strong>Principal Investigator:</strong> Jennifer Cole, Department of Linguistics</p>
     <p><strong>Student Investigator:</strong> Rebekah Stanhope</p>
     <p>
-      <strong>Supported By:</strong> Northwestern University Linguistics Department.
+      <strong>Supported By:</strong> This research is supported by the Weinberg College of Arts and Sciences
+       and the Northwestern University Linguistics Department. 
     </p>
     <p>
       <strong>Key information about this research study:</strong>
@@ -17,23 +18,24 @@
       that is more detailed is listed later on in this form.
     </p>
     <p>
-      The purpose of this study is to gain a better understanding of how people perceive speech in English.
-      You will be asked to do tasks involving English sentences, such as listening to audio and responding to questions. 
-      We expect that you will be in this research study for no longer than 60 minutes.
-      The risks associated with participation in this study are no greater than those encountered in daily life.
-      There are no direct benefits to you from participating in this study, but this study may benefit society if the results lead to a better understanding of how people perceive speech.
+      The purpose of this study is to gain a better understanding of how people perceive prosodic features of
+      American English speech. You will be asked to make judgments about how prominent English words sound 
+      (in other words, how much they stand out). We expect that you will be in this research study for 20-30 minutes.
+      There are no risks associated with participating in this study beyond what you experience from using a computer in everyday life.
+      There are no direct benefits to you from participating in this study, but this study may benefit society if the results lead to a
+      better understanding of how people perceive speech.
     </p>
 
     <p><strong>Why am I being asked to take part in this research study?</strong></p>
-    <p>We are asking you to take part in this research study because you are 18 to 65 years old and are a native speaker
-      of English.</p>
+    <p>We are asking you to take part in this research study because you are a native speaker
+       of American English and over 18 years old.</p>
 
 
     <p class="mt-5">
       <strong>How many people will be in this study?</strong>
     </p>
     <p>
-      We expect about 60 people will be in this research study.
+      We expect about 30 people will be in this research study.
     </p>
     <p>
       <strong>What should I know about participating in a research study?</strong>
@@ -42,17 +44,19 @@
       <li>Whether or not you take part is up to you.</li>
       <li>You can choose not to take part.</li>
       <li>You can agree to take part and later change your mind.</li>
+      <li>You can ask all the questions you want before you decide.</li>
       <li>Your decision will not be held against you.</li>
+      <li>You do not have to answer any question you do not want to answer.</li>
     </ul>
     <p class="mt-5">
       <strong>What happens if I say, "Yes, I want to be in this research"?</strong>
     </p>
     <p>
-      The research study involves a single session which will last no longer than 60 minutes. 
-      You will be asked to perform a task involving listening to short dialogues and answering simple comprehension questions.
-      The dialogues will be played auditorily over your headphones, while comprehension questions will be displayed on the screen.
-      You will indicate your response by pressing one of two buttons on your keyboard.
-      Your responses and the time it takes you to respond will be aggregated with responses from other participants and analyzed for each sentence.
+      The research study involves a single session which will last no longer than 30 minutes.
+      You will participate remotely from a quiet location of your choice, using your computer and headphones.
+      You will not directly interact with any member of the study team. You will be asked to listen to recordings
+      of English sentences and make judgments about how prominent certain words are (in other words, how much 
+      they stand out based on the way they sound).
     </p>
 
     <p>
@@ -75,12 +79,10 @@
         mind later?</strong>
     </p>
     <p>
-      Participation in research is voluntary. You can decide to participate or not to participate. If you do not want to
-      be in this study or withdraw from the study at any point, your decision will not affect your relationship with
-      Northwestern University. If you are participating in this experiment through the Linguistics Subject Pool and you
-      withdraw from the study immediately upon commencing the study procedures, you will not receive Linguistics class
-      credit. You may participate in another research study or attend one of two video showings throughout the quarter to
-      receive course credit.
+      Participation in research is voluntary. You can decide to participate or not to participate.
+      If you do not want to be in this study or you decide to withdraw from the study at any point,
+      your decision will not affect your relationship with Northwestern University. If you withdraw
+      from the study, you will be paid for the portion you completed.
     </p>
     <p>
       If you decide to withdraw from this study, any data already collected from you will be destroyed.
@@ -109,34 +111,26 @@
     <ul>
       <li>University officials, government officials, study funders, auditors, and the Institutional Review Board may need
         access to the study information to make sure the study is done in a safe and appropriate manner.</li>
-      <li>The research team may give information to appropriate authorities for reasons of health and safety – for
-        example, if you indicate that you plan to harm yourself or others, or for public health reasons.</li>
     </ul>
     <p class="mt-5">
       <strong>How might the information collected in this study be shared in the
         future?</strong>
     </p>
     <p>
-      We will keep the information we collect about you during this research study for study recordkeeping and for
-      potential use in future research projects. De-identified data from this study may be shared with the research
-      community, with journals in which study results are published, and with databases and data repositories used for
-      research. We will remove or code any personal information that could directly identify you before the study data are
-      shared. Despite these measures, we cannot guarantee anonymity of your personal data.
+      We will keep the information we collect about you during this research study for study recordkeeping.
     </p>
     <p>
-      The results of this study could be shared in articles and presentations, but will not include any information that
-      identifies you unless you give permission for use of information that identifies you in articles and presentations.
+      De-identified data from this study may be shared with the research community, with journals in which study results are published,
+      and with databases and data repositories used for research. We will remove or code any personal information that could directly
+      identify you before the study data are shared. Despite these measures, we cannot guarantee the anonymity of your personal data.
     </p>
 
     <p>
       <strong>Will I be paid or given anything for taking part in this study?</strong>
     </p>
     <p>
-      Participants recruited through a crowd-worker platform will be compensated at a rate of $13.70/hour but no less than
-      $3. If you voluntarily withdraw from the study before completion, you will be paid for the portion that you
-      completed. Participants recruited through the Linguistics Subject Pool will will receive 1 credit towards
-      fulfillment of the Linguistics class experimental requirement on completion of this experiment. If you withdraw from
-      this study before completion, you will not receive course credit.
+      You will be paid for your time at a rate of $13.35 per hour. If you voluntarily withdraw from the study before completion,
+      you will be paid for the portion that you completed.
     </p>
     <p>
       <strong>Who can I talk to?</strong>
