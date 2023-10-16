@@ -1,9 +1,9 @@
 [
   {
     "trialID": "practice",
-    "targetSentence": "some sentence here",
-    "audio": "sound_file_here.mp3",
-    "targetWord1": 1,
-    "targetWord2": 2
+    "targetSentence": "the girl didn't choose the blue dress today",
+    "audio": "practice.mp3",
+    "targetWord1": 2,
+    "targetWord2": 8
   }
 ]
