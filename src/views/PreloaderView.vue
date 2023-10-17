@@ -67,6 +67,16 @@ onMounted(async () => {
       store.list = await f.json();
       store.list = shuffle(store.list);
       store.index = 0
+
+      //load practice list;
+      const fp = await fetch("list_practice.json");
+      let practiceList = await fp.json();
+      practiceList[0].isPractice = true;
+
+      //prepend practice list to regular list
+      store.list = practiceList.concat(store.list)
+      
+
       isLoading.value = false
     } catch (error) {
       console.log(error);

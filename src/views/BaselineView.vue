@@ -1,13 +1,16 @@
 <template>
+  <VOnboardingWrapper ref="wrapper" :steps="steps" @finish="tourComplete">
+
+  </VOnboardingWrapper>
   <v-container>
     <v-row>
       <v-col cols="12" justify-center>
         <v-fade-transition hide-on-leave>
           <div>
-            <div elevation="2" class="d-flex justify-center pa-4" v-if="state=='blank'">
+            <div elevation="2" class="d-flex justify-center pa-4" v-if="state == 'blank'">
               <v-icon size="x-large" color="success">check_circle</v-icon>
             </div>
-            <v-alert elevation="2" class="mr-8" v-if="state!='blank'">
+            <v-alert elevation="2" class="mr-8" v-if="state != 'blank'">
               <div class="d-flex justify-center">
                 <v-btn size="large" :disabled="isPlaying" :loading="isLoading" @click="playAudio" class="ma-1">
                   <v-progress-circular :v-fade-transition="false" :model-value="playProgress"
@@ -21,11 +24,11 @@
 
             <section class="rating-elements" v-if="state == 'rate1' || state == 'rate2'">
               <div class="d-flex justify-center mb-4">
-                <div class="d-flex flex-column elevation-4 mt-4 pa-2" style="border-radius: 4px;">
+                <div class="d-flex flex-column elevation-4 mt-4 pa-2" style="border-radius: 4px;" id="sentenceDiv">
                   <h2 class="ml-2 font-weight-regular" v-html="targetSentence"></h2>
                 </div>
               </div>
-              <v-card variant="outlined" class="mt-6 ml-2 mr-2 pa-2">
+              <v-card variant="outlined" class="mt-6 ml-2 mr-2 pa-2" id="ratingDiv">
                 <p style="text-align:center">How much did this word stand out?</p>
                 <div class="d-flex flex-column align-center">
                   <v-radio-group v-model="response" inline>
@@ -55,7 +58,7 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue';
+import { ref, computed,  } from 'vue';
 import { useStore } from "@/stores/store.js"
 import UsePlaySound from "@/composables/UsePlaySound";
 import { useRouter } from "vue-router";
@@ -63,13 +66,65 @@ import { gsap } from "gsap"
 import UseWait from "@/composables/UseWait"
 const { wait } = UseWait()
 import { getDatabase, ref as dbRef, child, serverTimestamp, push } from "firebase/database";
-
+import { VOnboardingWrapper, useVOnboarding } from 'v-onboarding'
+import 'v-onboarding/dist/style.css'
+import Swal from 'sweetalert2';
 
 const store = useStore();
 const router = useRouter();
 
 const state = ref('listen');//listen, rate1, rate2
 const targetSentence = ref("");
+
+
+const steps = [
+  {
+    attachTo: { element: '#sentenceDiv' }, content: { title: "This is the sentence you will be rating. Notice the word highlighted in red." }, options: {
+      hideButtons: {
+        exit: true,
+        previous: true,
+        next: false
+      }
+    }
+  },
+  {
+    attachTo: { element: '#ratingDiv' }, content: { title: "Select your rating for the word in red, then click submit to rate the next underlined word." }, options: {
+      hideButtons: {
+        exit: true,
+        previous: true,
+        next: true
+      }
+    }
+  },
+  {
+    attachTo: { element: '#sentenceDiv' }, content: { title: "Now you will be rating this next word that's currently highlighted in red." }, options: {
+      hideButtons: {
+        exit: true,
+        previous: true,
+        next: false
+      }
+    }
+  },
+  {
+    attachTo: { element: '#ratingDiv' }, content: { title: "Again, select your rating for the word in red, then click submit." }, options: {
+      hideButtons: {
+        exit: true,
+        previous: true,
+        next: true
+      }
+    }
+  },  
+]
+const wrapper = ref(null);
+const { start, goToStep, finish } = useVOnboarding(wrapper);
+const tourComplete = () => {
+  Swal.fire({
+    title:"Practice Complete",
+    icon: "info",
+    text: "Practice trial complete. Click 'Next' to begin the experiment.",
+    confirmButtonText: 'Next'
+  })
+}
 
 /*
 const slowDown = ref(true);
@@ -90,12 +145,23 @@ const next = async () => {
     targetSentence.value = store.list[store.index].targetSentence;
     //playAudio();
   } else if (state.value == 'listen') {
+    if(store.list[store.index].isPractice === true){
+      start();
+    }
     state.value = "rate1"
     targetSentence.value = getHighlightWord(store.list[store.index].targetSentence, store.list[store.index].targetWord1, [store.list[store.index].targetWord2, store.list[store.index].targetWord3, store.list[store.index].targetWord4]);
   } else if (state.value == 'rate1') {
+    if(store.list[store.index].isPractice === true){
+      goToStep(2)
+    }
     state.value = "rate2"
     targetSentence.value = getHighlightWord(store.list[store.index].targetSentence, store.list[store.index].targetWord2, [store.list[store.index].targetWord1, store.list[store.index].targetWord3, store.list[store.index].targetWord4]);
   } else if (state.value == 'rate2') {
+    if(store.list[store.index].isPractice === true){
+      finish();
+      store.isPractice = false;
+    }
+    
     saveResponses();
 
     store.index += 1;
@@ -119,7 +185,7 @@ const getHighlightWord = (targetSentence, index, otherIndexes) => {
     } else {
       let found = 0;
       for (let k = 0; k < otherIndexes.length; k++) {
-        if (otherIndexes[k]-1 == i) {
+        if (otherIndexes[k] - 1 == i) {
           found = 1
           break;
         }
@@ -245,6 +311,19 @@ const progress = computed(() => (store.index + 1) + "/" + store.list.length);
     background-color: rgba(152, 128, 255, 0.2);
   }
 }
+
+.v-onboarding-item {
+background-color: #E65100;
+color: white;
+}
+
+:root {
+  --v-onboarding-step-arrow-background: #E65100;
+  --v-onboarding-step-arrow-size: 15px;
+}
+
+
+
 </style>
 
 
