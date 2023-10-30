@@ -32,7 +32,7 @@
     "targetSentence": "I like the cubist painting on the right because it incorporates multiple perspectives",
     "audio": "artmuseum.mp3",
     "targetWord1": 4,
-    "targetWord2": 13
+    "targetWord2": 10
   },
   {
     "trialID": "filler10",
@@ -46,7 +46,7 @@
     "targetSentence": "you could decorate it with shells or dig a moat around it",
     "audio": "sandcastle.mp3",
     "targetWord1": 6,
-    "targetWord2": 10
+    "targetWord2": 9
   },
   {
     "trialID": "filler12",
@@ -66,7 +66,7 @@
     "trialID": "filler3",
     "targetSentence": "I'll switch it up for once and go with green",
     "audio": "boardgame.mp3",
-    "targetWord1": 2,
+    "targetWord1": 5,
     "targetWord2": 10
   },
   {
@@ -80,7 +80,7 @@
     "trialID": "filler5",
     "targetSentence": "their almond croissants have the most delicious filling",
     "audio": "cafe.mp3",
-    "targetWord1": 2,
+    "targetWord1": 4,
     "targetWord2": 6
   },
   {
@@ -94,7 +94,7 @@
     "trialID": "filler7",
     "targetSentence": "yes I'm going to use some sprinkles",
     "audio": "cookies.mp3",
-    "targetWord1": 3,
+    "targetWord1": 4,
     "targetWord2": 5
   },
   {

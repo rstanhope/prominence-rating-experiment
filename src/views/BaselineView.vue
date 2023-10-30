@@ -11,7 +11,7 @@
               <v-icon size="x-large" color="success">check_circle</v-icon>
             </div>
             <v-alert elevation="2" class="mr-8" v-if="state != 'blank'">
-              <div class="d-flex justify-center">
+              <div class="d-flex justify-center" id="listenDiv">
                 <v-btn size="large" :disabled="isPlaying" :loading="isLoading" @click="playAudio" class="ma-1">
                   <v-progress-circular :v-fade-transition="false" :model-value="playProgress"
                     class="mr-1"><v-icon>play_circle_filled</v-icon>
@@ -33,8 +33,8 @@
                 <div class="d-flex flex-column align-center">
                   <v-radio-group v-model="response" inline>
                     <v-radio label="Not at all" value="1"></v-radio>
-                    <v-radio label="Not very much" value="2"></v-radio>
-                    <v-radio label="A little" value="3"></v-radio>
+                    <v-radio label="Slightly" value="2"></v-radio>
+                    <v-radio label="Moderately" value="3"></v-radio>
                     <v-radio label="A lot" value="4"></v-radio>
                   </v-radio-group>
                 </div>
@@ -79,13 +79,23 @@ const targetSentence = ref("");
 
 const steps = [
   {
-    attachTo: { element: '#sentenceDiv' }, content: { title: "This is the sentence you will be rating. Notice the word highlighted in red." }, options: {
+    attachTo: { element: '#sentenceDiv' }, content: { title: "Here are the words you will be rating. First, you will rate the word in red, then the next underlined word." }, options: {
       hideButtons: {
         exit: true,
         previous: true,
         next: false
       }
     }
+  },
+  {
+    attachTo: { element: '#listenDiv' }, content: { title: "If you need to, you can listen to the sentence again while rating." }, options: {
+      hideButtons: {
+        exit: true,
+        previous: true,
+        next: false
+      }
+    }
+
   },
   {
     attachTo: { element: '#ratingDiv' }, content: { title: "Select your rating for the word in red, then click submit to rate the next underlined word." }, options: {
@@ -106,7 +116,7 @@ const steps = [
     }
   },
   {
-    attachTo: { element: '#ratingDiv' }, content: { title: "Again, select your rating for the word in red, then click submit." }, options: {
+    attachTo: { element: '#ratingDiv' }, content: { title: "Again, select your rating for the word in red, then click submit. Remember that you can listen to the sentence again if needed." }, options: {
       hideButtons: {
         exit: true,
         previous: true,

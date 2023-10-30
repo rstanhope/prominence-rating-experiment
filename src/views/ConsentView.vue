@@ -129,7 +129,7 @@
       <strong>Will I be paid or given anything for taking part in this study?</strong>
     </p>
     <p>
-      You will be paid for your time at a rate of $13.35 per hour. If you voluntarily withdraw from the study before completion,
+      You will be paid for your time at a rate of $13.70 per hour. If you voluntarily withdraw from the study before completion,
       you will be paid for the portion that you completed.
     </p>
     <p>
