@@ -23,21 +23,21 @@
   {
     "trialID": "nounfsLH",
     "targetSentence": "well I'd like to get something I can walk with and the fudge shake might be tasty",
-    "audio": "nounfudgeshake_H.mp3",
+    "audio": "nounfudgeshake_LH.mp3",
     "targetWord1": 9,
     "targetWord2": 13
   },
   {
     "trialID": "adjmaLH",
     "targetSentence": "well I want to be more active and the morning archery fits into my schedule",
-    "audio": "adjmorningarchery_H.mp3",
+    "audio": "adjmorningarchery_LH.mp3",
     "targetWord1": 7,
     "targetWord2": 11
   },
   {
     "trialID": "adjbhLH",
     "targetSentence": "well I'm trying to create balance and the blue heart would be perfect here",
-    "audio": "adjblueheart_H.mp3",
+    "audio": "adjblueheart_LH.mp3",
     "targetWord1": 6,
     "targetWord2": 9
   },
@@ -51,7 +51,7 @@
   {
     "trialID": "pizzaLH",
     "targetSentence": "well I'm in the mood for something with meat and the pepperoni slice looks tasty",
-    "audio": "pizza_H.mp3",
+    "audio": "pizza_LH.mp3",
     "targetWord1": 5,
     "targetWord2": 12
   },
@@ -65,7 +65,7 @@
   {
     "trialID": "sauceLH",
     "targetSentence": "hmm I'm craving something spicy and the buffalo sauce looks tasty",
-    "audio": "sauce_H.mp3",
+    "audio": "sauce_LH.mp3",
     "targetWord1": 5,
     "targetWord2": 8
   },

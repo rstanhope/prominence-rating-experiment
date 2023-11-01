@@ -23,21 +23,21 @@
   {
     "trialID": "adjcbLH",
     "targetSentence": "well I want her to take something durable and the checkered binder is reinforced",
-    "audio": "adjcheckeredbinder_H.mp3",
+    "audio": "adjcheckeredbinder_LH.mp3",
     "targetWord1": 8,
     "targetWord2": 11
   },
   {
     "trialID": "nounpsLH",
     "targetSentence": "well I need something practical and the plaid scarf seems versatile",
-    "audio": "nounplaidscarf_H.mp3",
+    "audio": "nounplaidscarf_LH.mp3",
     "targetWord1": 5,
     "targetWord2": 9
   },
   {
     "trialID": "nounbhLH",
     "targetSentence": "well I'm trying to create balance and the blue heart would be perfect here",
-    "audio": "nounblueheart_H.mp3",
+    "audio": "nounblueheart_LH.mp3",
     "targetWord1": 6,
     "targetWord2": 9
   },
@@ -58,7 +58,7 @@
   {
     "trialID": "puzzleLH",
     "targetSentence": "hmm I'm working on a tree and the triangular one might fit here",
-    "audio": "puzzle_H.mp3",
+    "audio": "puzzle_LH.mp3",
     "targetWord1": 3,
     "targetWord2": 9
   },
@@ -72,14 +72,14 @@
   {
     "trialID": "tshirtsLH",
     "targetSentence": "well I'm looking for a good deal and the yellow one is on sale",
-    "audio": "tshirts_H.mp3",
+    "audio": "tshirts_LH.mp3",
     "targetWord1": 3,
     "targetWord2": 10
   },
   {
     "trialID": "yarnLH",
     "targetSentence": "hmm I'm looking for a warm color and the orange yarn would be perfect",
-    "audio": "yarn_H.mp3",
+    "audio": "yarn_LH.mp3",
     "targetWord1": 6,
     "targetWord2": 10
   },
