@@ -1,8 +1,8 @@
 [
   {
-    "trialID": "catLH",
+    "trialID": "catH",
     "targetSentence": "hmm I want a playful cat and the calico one looks full of energy",
-    "audio": "cat_LH.mp3",
+    "audio": "cat_H.mp3",
     "targetWord1": 5,
     "targetWord2": 9
   },
@@ -14,9 +14,9 @@
     "targetWord2": 12
   },
   {
-    "trialID": "puzzleLH",
+    "trialID": "puzzleH",
     "targetSentence": "hmm I'm working on a tree and the triangular one might fit here",
-    "audio": "puzzle_LH.mp3",
+    "audio": "puzzle_H.mp3",
     "targetWord1": 3,
     "targetWord2": 9
   },
@@ -28,16 +28,16 @@
     "targetWord2": 8
   },
   {
-    "trialID": "tshirtsLH",
+    "trialID": "tshirtsH",
     "targetSentence": "well I'm looking for a good deal and the yellow one is on sale",
-    "audio": "tshirts_LH.mp3",
+    "audio": "tshirts_H.mp3",
     "targetWord1": 3,
     "targetWord2": 10
   },
   {
-    "trialID": "yarnLH",
+    "trialID": "yarnH",
     "targetSentence": "hmm I'm looking for a warm color and the orange yarn would be perfect",
-    "audio": "yarn_LH.mp3",
+    "audio": "yarn_H.mp3",
     "targetWord1": 6,
     "targetWord2": 10
   },
@@ -112,9 +112,9 @@
     "targetWord2": 5
   },
   {
-    "trialID": "nouncbLH",
+    "trialID": "nouncbH",
     "targetSentence": "well I want her to take something durable and the checkered binder is reinforced",
-    "audio": "nouncheckeredbinder_LH.mp3",
+    "audio": "nouncheckeredbinder_H.mp3",
     "targetWord1": 8,
     "targetWord2": 11
   },
@@ -133,9 +133,9 @@
     "targetWord2": 9
   },
   {
-    "trialID": "adjpsLH",
+    "trialID": "adjpsH",
     "targetSentence": "well I need something practical and the plaid scarf seems versatile",
-    "audio": "adjplaidscarf_LH.mp3",
+    "audio": "adjplaidscarf_H.mp3",
     "targetWord1": 5,
     "targetWord2": 9
   },
@@ -161,9 +161,9 @@
     "targetWord2": 15
   },
   {
-    "trialID": "adjssLH",
+    "trialID": "adjssH",
     "targetSentence": "well I'm on a tight budget and the sport spray is on sale",
-    "audio": "adjsportspray_LH.mp3",
+    "audio": "adjsportspray_H.mp3",
     "targetWord1": 3,
     "targetWord2": 10
   }

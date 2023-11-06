@@ -56,9 +56,9 @@
     "targetWord2": 12
   },
   {
-    "trialID": "puzzleLH",
+    "trialID": "puzzleH",
     "targetSentence": "hmm I'm working on a tree and the triangular one might fit here",
-    "audio": "puzzle_LH.mp3",
+    "audio": "puzzle_H.mp3",
     "targetWord1": 3,
     "targetWord2": 9
   },
@@ -70,16 +70,16 @@
     "targetWord2": 8
   },
   {
-    "trialID": "tshirtsLH",
+    "trialID": "tshirtsH",
     "targetSentence": "well I'm looking for a good deal and the yellow one is on sale",
-    "audio": "tshirts_LH.mp3",
+    "audio": "tshirts_H.mp3",
     "targetWord1": 3,
     "targetWord2": 10
   },
   {
-    "trialID": "yarnLH",
+    "trialID": "yarnH",
     "targetSentence": "hmm I'm looking for a warm color and the orange yarn would be perfect",
-    "audio": "yarn_LH.mp3",
+    "audio": "yarn_H.mp3",
     "targetWord1": 6,
     "targetWord2": 10
   },
