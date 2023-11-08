@@ -60,14 +60,14 @@
     "targetSentence": "well I'd like to get something I can walk with and the fudge shake might be tasty",
     "audio": "nounfudgeshake_H.mp3",
     "targetWord1": 9,
-    "targetWord2": 13
+    "targetWord2": 14
   },
   {
     "trialID": "adjmaH",
     "targetSentence": "well I want to be more active and the morning archery fits into my schedule",
     "audio": "adjmorningarchery_H.mp3",
     "targetWord1": 7,
-    "targetWord2": 11
+    "targetWord2": 10
   },
   {
     "trialID": "filler3",
@@ -102,7 +102,7 @@
     "targetSentence": "well I'm on a tight budget and the sport spray is on sale",
     "audio": "nounsportspray_H.mp3",
     "targetWord1": 3,
-    "targetWord2": 10
+    "targetWord2": 9
   },
   {
     "trialID": "filler7",
@@ -116,7 +116,7 @@
     "targetSentence": "well I want her to take something durable and the checkered binder is reinforced",
     "audio": "nouncheckeredbinder_H.mp3",
     "targetWord1": 8,
-    "targetWord2": 11
+    "targetWord2": 12
   },
   {
     "trialID": "filler8",
@@ -137,7 +137,7 @@
     "targetSentence": "well I need something practical and the plaid scarf seems versatile",
     "audio": "adjplaidscarf_H.mp3",
     "targetWord1": 5,
-    "targetWord2": 9
+    "targetWord2": 8
   },
   {
     "trialID": "filler10",
@@ -165,6 +165,6 @@
     "targetSentence": "well I'm on a tight budget and the sport spray is on sale",
     "audio": "adjsportspray_H.mp3",
     "targetWord1": 3,
-    "targetWord2": 10
+    "targetWord2": 9
   }
 ]

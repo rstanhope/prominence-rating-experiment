@@ -4,47 +4,47 @@
     "targetSentence": "well I'd like to get something I can walk with and the fudge shake might be tasty",
     "audio": "adjfudgeshake_H.mp3",
     "targetWord1": 9,
-    "targetWord2": 13
+    "targetWord2": 14
   },
   {
     "trialID": "nounmaH",
     "targetSentence": "well I want to be more active and the morning archery fits into my schedule",
     "audio": "nounmorningarchery_H.mp3",
     "targetWord1": 7,
-    "targetWord2": 11
+    "targetWord2": 10
   },
   {
     "trialID": "adjssH",
     "targetSentence": "well I'm on a tight budget and the sport spray is on sale",
     "audio": "adjsportspray_H.mp3",
     "targetWord1": 3,
+    "targetWord2": 9
+  },
+  {
+    "trialID": "adjcbH",
+    "targetSentence": "well I want her to take something durable and the checkered binder is reinforced",
+    "audio": "adjcheckeredbinder_H.mp3",
+    "targetWord1": 8,
+    "targetWord2": 12
+  },
+  {
+    "trialID": "nounpsH",
+    "targetSentence": "well I need something practical and the plaid scarf seems versatile",
+    "audio": "nounplaidscarf_H.mp3",
+    "targetWord1": 5,
+    "targetWord2": 8
+  },
+  {
+    "trialID": "nounbhH",
+    "targetSentence": "well I'm trying to create balance and the blue heart would be perfect here",
+    "audio": "nounblueheart_H.mp3",
+    "targetWord1": 6,
     "targetWord2": 10
   },
   {
-    "trialID": "adjcbLH",
-    "targetSentence": "well I want her to take something durable and the checkered binder is reinforced",
-    "audio": "adjcheckeredbinder_LH.mp3",
-    "targetWord1": 8,
-    "targetWord2": 11
-  },
-  {
-    "trialID": "nounpsLH",
-    "targetSentence": "well I need something practical and the plaid scarf seems versatile",
-    "audio": "nounplaidscarf_LH.mp3",
-    "targetWord1": 5,
-    "targetWord2": 9
-  },
-  {
-    "trialID": "nounbhLH",
-    "targetSentence": "well I'm trying to create balance and the blue heart would be perfect here",
-    "audio": "nounblueheart_LH.mp3",
-    "targetWord1": 6,
-    "targetWord2": 9
-  },
-  {
-    "trialID": "catLH",
+    "trialID": "catH",
     "targetSentence": "hmm I want a playful cat and the calico one looks full of energy",
-    "audio": "cat_LH.mp3",
+    "audio": "cat_H.mp3",
     "targetWord1": 5,
     "targetWord2": 9
   },
