@@ -27,19 +27,21 @@ const router = createRouter({
       name: 'instructions',
       component: () => import('../views/InstructionsView.vue'),
       meta: { oneWay: true }
-    },        
+    },
+    /*        
     {
       path: '/baseline',
       name: 'baseline',
       component: () => import('../views/BaselineView.vue'),
       meta: { oneWay: true }
-    },       
-    /*{
+    },
+    */       
+    {
       path: '/experiment',
       name: 'experiment',
       component: () => import('../views/ExperimentView.vue'),
       meta: { oneWay: true }
-    },*/
+    },
     {
       path: '/end',
       name: 'end',

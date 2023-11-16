@@ -24,7 +24,7 @@ import { useRouter } from "vue-router";
 const router = useRouter();
 
 const next = () => {
-    router.push("/baseline");
+    router.push("/experiment");
 }
 
 

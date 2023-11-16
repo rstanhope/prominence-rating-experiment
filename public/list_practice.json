@@ -1,9 +1,13 @@
 [
   {
     "trialID": "practice",
-    "targetSentence": "the girl didn't choose the blue dress today",
-    "audio": "practice.mp3",
-    "targetWord1": 2,
-    "targetWord2": 8
+    "image": "cats_many_indiscrete.png",
+    "dialogueTurn1": "Aren’t these cats so adorable?",
+    "dialogueTurn2": "Yeah, I’m so excited to adopt one.",
+    "dialogueTurn3": "Do you have a favorite yet? There are so many, it’s hard to choose.",
+    "targetSentence": "hmm I want a playful cat and the calico one looks full of energy",
+    "audio": "cat_H.mp3",
+    "targetWord1": 5,
+    "targetWord2": 9
   }
 ]

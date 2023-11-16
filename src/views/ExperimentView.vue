@@ -1,13 +1,13 @@
 <template>
+  <VOnboardingWrapper ref="wrapper" :steps="steps" @finish="tourComplete"></VOnboardingWrapper>
   <v-container>
     <v-row>
       <v-col cols="4">
 
         <v-row justify="end">
-          <!-- <v-img :src="'images/' + store.list[store.index].image" width="345" height="230" class="mr-2" /> -->
-          <v-img :src="'images/' + store.list[store.index].image" @loadstart="imageLoading = true"
+          <v-img :src="'images/' + currentItem.image" @loadstart="imageLoading = true"
             @load="imageLoading = false" width="345" height="230" max-width="345" max-height="230"
-            class="elevation-1 mr-2 mt-2">
+            class="mr-2 mt-2">
             <template v-slot:error>
               <p style="text-align:center;color:red">Could not load image. Try refreshing the page</p>
             </template>
@@ -22,15 +22,15 @@
       </v-col>
       <v-col cols="8">
         <v-fade-transition hide-on-leave>
-          <div class="dialogue" v-if="state == 'dialogue'">
+          <div class="dialogue" v-if="state == 'dialogue'" id="dialogueDiv">
             <v-alert border="end" border-color="deep-orange accent-4" elevation="2" class="mb-2 ml-8">
-              {{ store.list[store.index].dialogueTurn1 }}
+              {{ currentItem.dialogueTurn1 }}
             </v-alert>
             <v-alert border="start" border-color="deep-purple accent-4" elevation="2" class="mb-2 mr-8">
-              {{ store.list[store.index].dialogueTurn2 }}
+              {{ currentItem.dialogueTurn2 }}
             </v-alert>
             <v-alert border="end" border-color="deep-orange accent-4" elevation="2" class="mb-2 ml-8">
-              {{ store.list[store.index].dialogueTurn3 }}
+              {{ currentItem.dialogueTurn3 }}
             </v-alert>
             <v-alert border="start" border-color="deep-purple accent-4" elevation="2" class="mb-2 mr-8">
               <div class="d-flex justify-center">
@@ -45,12 +45,12 @@
 
 
           <div v-if="state == 'listen' || state == 'rate1' || state == 'rate2' || state == 'rate3' || state == 'rate4'">
-            <v-alert border="end" border-color="deep-orange accent-4" elevation="2" class="mb-2 ml-8">
-              {{ store.list[store.index].dialogueTurn3 }}
+            <v-alert border="end" border-color="deep-orange accent-4" elevation="2" class="mb-2 ml-8" id="targetQuestionDiv">
+              {{ currentItem.dialogueTurn3 }}
             </v-alert>
             <v-alert border="start" border-color="deep-purple accent-4" elevation="2" class="mr-8">
               <div class="d-flex justify-center">
-                <v-btn size="large" :disabled="isPlaying" :loading="isLoading" @click="playAudio" class="ma-1">
+                <v-btn size="large" :disabled="isPlaying" :loading="isLoading" @click="playAudio" class="ma-1" id="targetSentenceSoundButton">
                   <v-progress-circular :v-fade-transition="false" :model-value="playProgress"
                     class="mr-1"><v-icon>play_circle_filled</v-icon>
                   </v-progress-circular>
@@ -62,11 +62,11 @@
 
             <section class="rating-elements">
               <div class="d-flex justify-center mb-4">
-                <div class="d-flex flex-column elevation-4 mt-4 pa-2" style="border-radius: 4px;">
+                <div class="d-flex flex-column elevation-4 mt-4 pa-2" style="border-radius: 4px;" id="targetSentenceDiv">
                   <h2 class="ml-2 font-weight-regular" v-html="targetSentence"></h2>
                 </div>
               </div>
-              <v-card variant="outlined" class="mt-6 ml-2 mr-2 pa-2"
+              <v-card variant="outlined" class="mt-6 ml-2 mr-2 pa-2" id="ratingDiv"
                 v-if="state == 'rate1' || state == 'rate2' || state == 'rate3' || state == 'rate4'">
                 <p style="text-align:center">How much did this word stand out?</p>
                 <div class="d-flex flex-column align-center">
@@ -105,6 +105,86 @@ import { gsap } from "gsap"
 import UseWait from "@/composables/UseWait"
 const { wait } = UseWait()
 import { getDatabase, ref as dbRef, child, serverTimestamp, push } from "firebase/database";
+import { VOnboardingWrapper, useVOnboarding } from 'v-onboarding'
+import 'v-onboarding/dist/style.css'
+import Swal from 'sweetalert2';
+
+//practice trial on-boarding
+const steps = [
+  {
+    attachTo: { element: '#dialogueDiv' }, content: { title: "This is the dialogue. Please read it. Then click the 'next' button" }, options: {
+      hideButtons: {
+        exit: true,
+        previous: true,
+        next: true
+      }
+    }
+  },
+  {
+    attachTo: { element: '#targetQuestionDiv' }, content: { title: "This is the target question" }, options: {
+      hideButtons: {
+        exit: true,
+        previous: true,
+        next: false
+      }
+    }
+  },
+  {
+    attachTo: { element: '#targetSentenceSoundButton' }, content: { title: "Click here to play. You can listen to this as many times as you wish." }, options: {
+      hideButtons: {
+        exit: true,
+        previous: true,
+        next: true
+      }
+    }
+  },
+  {
+    attachTo: { element: '#targetSentenceDiv' }, content: { title: "This is the target sentence you just heard. Note the word in red that you will be rating." }, options: {
+      hideButtons: {
+        exit: true,
+        previous: true,
+        next: false
+      }
+    }
+  },    
+  {
+    attachTo: { element: '#ratingDiv' }, content: { title: "Select your rating for the word in red, then click submit to rate the next underlined word." }, options: {
+      hideButtons: {
+        exit: true,
+        previous: true,
+        next: true
+      }
+    }
+  },
+  {
+    attachTo: { element: '#targetSentenceDiv' }, content: { title: "Now you will be rating this next word that's currently highlighted in red." }, options: {
+      hideButtons: {
+        exit: true,
+        previous: true,
+        next: false
+      }
+    }
+  },
+  {
+    attachTo: { element: '#ratingDiv' }, content: { title: "Select your rating for the word in red, then click submit to rate the next underlined word."}, options: {
+      hideButtons: {
+        exit: true,
+        previous: true,
+        next: true
+      }
+    }
+  },   
+]
+const wrapper = ref(null);
+const { start, goToStep, finish } = useVOnboarding(wrapper);
+const tourComplete = () => {
+  Swal.fire({
+    title:"Practice Complete",
+    icon: "info",
+    text: "Practice trial complete. Click 'Next' to begin the experiment.",
+    confirmButtonText: 'Next'
+  })
+}
 
 
 const store = useStore();
@@ -114,10 +194,17 @@ const state = ref('dialogue');//dialogue, listen, rate1, rate2, rate3, rate4
 const targetSentence = ref("");
 
 const slowDown = ref(true);
+const isPractice = computed(()=>currentItem.value.isPractice === true);
+const currentItem = computed(()=>store.list[store.index]);
+
 const doSlowDown = async () => {
   slowDown.value = true
   await wait(1000);
   slowDown.value = false
+  if(isPractice.value == true){
+    start();
+  }
+  
 }
 onMounted(() => {
   doSlowDown();
@@ -126,25 +213,29 @@ onMounted(() => {
 const imageLoading = ref(false)
 
 const next = async () => {
-
-
   if (state.value == 'dialogue') {
     state.value = "listen"
-    targetSentence.value = store.list[store.index].targetSentence;
-    //playAudio();
+    targetSentence.value = currentItem.value.targetSentence;
+    if(isPractice.value == true){
+      goToStep(1)
+    }
   } else if (state.value == 'listen') {
     state.value = "rate1"
-    targetSentence.value = getHighlightWord(store.list[store.index].targetSentence, store.list[store.index].targetWord1, [store.list[store.index].targetWord2, store.list[store.index].targetWord3, store.list[store.index].targetWord4]);
+    targetSentence.value = getHighlightWord(currentItem.value.targetSentence, currentItem.value.targetWord1, [currentItem.value.targetWord2, currentItem.value.targetWord3, currentItem.value.targetWord4]);
+    if(isPractice.value == true){
+      goToStep(3)
+    }
   } else if (state.value == 'rate1') {
     state.value = "rate2"
-    targetSentence.value = getHighlightWord(store.list[store.index].targetSentence, store.list[store.index].targetWord2, [store.list[store.index].targetWord1, store.list[store.index].targetWord3, store.list[store.index].targetWord4]);
+    targetSentence.value = getHighlightWord(currentItem.value.targetSentence, currentItem.value.targetWord2, [currentItem.value.targetWord1, currentItem.value.targetWord3, currentItem.value.targetWord4]);
+    if(isPractice.value == true){
+      goToStep(5)
+    }
   } else if (state.value == 'rate2') {
-    state.value = "rate3"
-    targetSentence.value = getHighlightWord(store.list[store.index].targetSentence, store.list[store.index].targetWord3, [store.list[store.index].targetWord1, store.list[store.index].targetWord2, store.list[store.index].targetWord4]);
-  } else if (state.value == 'rate3') {
-    state.value = "rate4"
-    targetSentence.value = getHighlightWord(store.list[store.index].targetSentence, store.list[store.index].targetWord4, [store.list[store.index].targetWord1, store.list[store.index].targetWord2, store.list[store.index].targetWord3]);
-  } else if (state.value == 'rate4') {
+    if(isPractice.value == true){
+      finish()
+    }
+
     saveResponses();
 
     store.index += 1;
@@ -187,11 +278,11 @@ const getHighlightWord = (targetSentence, index, otherIndexes) => {
 const { playSoundAsync, isPlaying, isLoading, getDuration } = UsePlaySound();
 const playProgress = ref(0)
 const playAudio = async () => {
-  let duration = await getDuration("sounds/" + store.list[store.index].audio);
+  let duration = await getDuration("sounds/" + currentItem.value.audio);
   //console.log(duration);
   playProgress.value = 0;
   gsap.to(playProgress, duration, { value: 100 })
-  await playSoundAsync("sounds/" + store.list[store.index].audio, 1, 0);
+  await playSoundAsync("sounds/" + currentItem.value.audio, 1, 0);
   playProgress.value = 0;
   if (state.value == "listen") {
     next();
@@ -215,11 +306,11 @@ const submit = async () => {
 }
 
 const saveResponses = () => {
-  let dataToSave = { ...store.list[store.index] }
+  let dataToSave = { ...currentItem.value }
   dataToSave.response1 = allResponses.value[0];
   dataToSave.response2 = allResponses.value[1];
-  dataToSave.response3 = allResponses.value[2];
-  dataToSave.response4 = allResponses.value[3];
+  //dataToSave.response3 = allResponses.value[2];
+  //dataToSave.response4 = allResponses.value[3];
   dataToSave.timestamp = serverTimestamp();
   let rtdbRef = child(dbRef(getDatabase()), "/data/" + store.pid);
   push(rtdbRef, dataToSave);
