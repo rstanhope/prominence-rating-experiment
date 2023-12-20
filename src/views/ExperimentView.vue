@@ -112,7 +112,7 @@ import Swal from 'sweetalert2';
 //practice trial on-boarding
 const steps = [
   {
-    attachTo: { element: '#dialogueDiv' }, content: { title: "This is the dialogue. Please read it. Then click the 'next' button" }, options: {
+    attachTo: { element: '#dialogueDiv' }, content: { title: "This is a conversation between two people. Please read it carefully, then click the 'next' button to continue." }, options: {
       hideButtons: {
         exit: true,
         previous: true,
@@ -121,7 +121,7 @@ const steps = [
     }
   },
   {
-    attachTo: { element: '#targetQuestionDiv' }, content: { title: "This is the target question" }, options: {
+    attachTo: { element: '#targetQuestionDiv' }, content: { title: "This is the last part of the conversation that you will see in writing. In the next step, you will hear a recording of what the other person said in response." }, options: {
       hideButtons: {
         exit: true,
         previous: true,
@@ -130,7 +130,7 @@ const steps = [
     }
   },
   {
-    attachTo: { element: '#targetSentenceSoundButton' }, content: { title: "Click here to play. You can listen to this as many times as you wish." }, options: {
+    attachTo: { element: '#targetSentenceSoundButton' }, content: { title: "Click here to play the response. You can listen to this as many times as you wish." }, options: {
       hideButtons: {
         exit: true,
         previous: true,
@@ -139,7 +139,7 @@ const steps = [
     }
   },
   {
-    attachTo: { element: '#targetSentenceDiv' }, content: { title: "This is the target sentence you just heard. Note the word in red that you will be rating." }, options: {
+    attachTo: { element: '#targetSentenceDiv' }, content: { title: "This is a transcript of the sentence you just heard. The words you will be rating are underlined." }, options: {
       hideButtons: {
         exit: true,
         previous: true,
@@ -166,7 +166,7 @@ const steps = [
     }
   },
   {
-    attachTo: { element: '#ratingDiv' }, content: { title: "Select your rating for the word in red, then click submit to rate the next underlined word."}, options: {
+    attachTo: { element: '#ratingDiv' }, content: { title: "Again, select your rating for the word in red, then click submit. Remember that you can listen to the sentence again if needed." }, options: {
       hideButtons: {
         exit: true,
         previous: true,

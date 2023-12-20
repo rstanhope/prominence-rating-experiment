@@ -1,13 +1,13 @@
 [
   {
     "trialID": "practice",
-    "image": "cats_many_indiscrete.png",
-    "dialogueTurn1": "Aren’t these cats so adorable?",
-    "dialogueTurn2": "Yeah, I’m so excited to adopt one.",
-    "dialogueTurn3": "Do you have a favorite yet? There are so many, it’s hard to choose.",
-    "targetSentence": "hmm I want a playful cat and the calico one looks full of energy",
-    "audio": "cat_H.mp3",
-    "targetWord1": 5,
-    "targetWord2": 9
+    "image": "white_background.png",
+    "dialogueTurn1": "Do you want to split a lunch combo? I just want some fries, but the combo's only a dollar more.",
+    "dialogueTurn2": "Sure!",
+    "dialogueTurn3": "Which entree do you want me to get?",
+    "targetSentence": "pick the hotdog please",
+    "audio": "practice_hd.mp3",
+    "targetWord1": 3,
+    "targetWord2": 4
   }
 ]

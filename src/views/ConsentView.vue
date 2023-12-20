@@ -20,7 +20,7 @@
     <p>
       The purpose of this study is to gain a better understanding of how people perceive prosodic features of
       American English speech. You will be asked to make judgments about how prominent English words sound 
-      (in other words, how much they stand out). We expect that you will be in this research study for 20-30 minutes.
+      (in other words, how much they stand out). We expect that you will be in this research study for about 15 minutes.
       There are no risks associated with participating in this study beyond what you experience from using a computer in everyday life.
       There are no direct benefits to you from participating in this study, but this study may benefit society if the results lead to a
       better understanding of how people perceive speech.
