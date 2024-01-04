@@ -112,7 +112,7 @@ import Swal from 'sweetalert2';
 //practice trial on-boarding
 const steps = [
   {
-    attachTo: { element: '#dialogueDiv' }, content: { title: "This is a conversation between two people. Please read it carefully, then click the 'next' button to continue." }, options: {
+    attachTo: { element: '#dialogueDiv' }, content: { title: "This is a conversation between two people. Please read it carefully. When you see the animated dots, that means the conversation will continue after you click the 'next' button. Click 'next' when you're ready." }, options: {
       hideButtons: {
         exit: true,
         previous: true,
@@ -181,8 +181,8 @@ const tourComplete = () => {
   Swal.fire({
     title:"Practice Complete",
     icon: "info",
-    text: "Practice trial complete. Click 'Next' to begin the experiment.",
-    confirmButtonText: 'Next'
+    text: "Practice complete. Click 'start' to close this popup and begin the experiment. You will see the first trial's dialogue immediately; make sure to read it before clicking 'next'.",
+    confirmButtonText: 'Start'
   })
 }
 
