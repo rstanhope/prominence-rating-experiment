@@ -17,6 +17,6 @@ onMounted(()=>{
 
 const submit = () => {
     const completionUrl = "https://app.prolific.com/submissions/complete?cc=CUO3PHJ9";
-    window.location.replace,(completionUrl);
+    window.location.replace(completionUrl);
 }
 </script>
