@@ -1,19 +1,48 @@
 [
     {
         "trialID": "catch",
-        "image": "candy.png",
-        "dialogueTurn1": "Have you had this candy before?",
-        "dialogueTurn2": "Yes, why?",
-        "dialogueTurn3": "I was wondering which flavor is better. What do you think?",
-        "targetSentence": "What flavor of candy was mentioned in previous dialogue?",
-        "options": [{"label":"vanilla", "correct":false}, {"label":"strawberry", "correct":false}, {"label":"chocolate", "correct":false}, {"label":"None of the above", "correct":true}]
+        "image": "checkeredbinder.png",
+        "dialogueTurn1": "Does Stella need anything else for the new school year?",
+        "dialogueTurn2": "Yes, something to keep their science worksheets in.",
+        "dialogueTurn3": "The polka dot binder is pretty cute.",
+        "targetSentence": "What school subject was mentioned in the previous dialogue?",
+        "options": [{"label":"math", "correct":false}, {"label":"history", "correct":false}, {"label":"science", "correct":true}, {"label":"None of the above", "correct":false}]
     },
     {
-        "image": "cats_2.png",
-        "dialogueTurn1": "I can’t believe we’re finally adopting a cat.",
-        "dialogueTurn2": "Yeah, I’m so excited!",
-        "dialogueTurn3": " Do you have a favorite yet? They’re both so cute.",
-        "targetSentence": "What type of animal was mentioned in the previous dialogue?", 
-        "options": [{"label":"dog", "correct":false}, {"label":"cat", "correct":true}, {"label":"hamster", "correct":false}, {"label":"None of the above", "correct":false}]
+        "trialID": "catch",
+        "image": "fudgeshake.png",
+        "dialogueTurn1": "I don't know what to order; everything looks so good.",
+        "dialogueTurn2": "Last time I ordered a strawberry sundae and it was delicious.",
+        "dialogueTurn3": "That sounds tasty, but it might be messy, and I'm wearing white.",
+        "targetSentence": "What menu item was mentioned in the previous dialogue?", 
+        "options": [{"label":"hot fudge sundae", "correct":false}, {"label":"strawberry sundae", "correct":true}, {"label":"strawberry milkshake", "correct":false}, {"label":"chocolate milkshake", "correct":false}]
+    },
+    {
+        "trialID": "catch",
+        "image": "plaidscarf.png",
+        "dialogueTurn1": "Wow, winter accessories are buy one, get one free.",
+        "dialogueTurn2": "Oh, nice! I really need a new pair of mittens.",
+        "dialgoueTurn3": "Do you like those plaid ones? They'd match your coat.",
+        "targetSentence": "Which object was discussed in the previous dialogue?",
+        "options": [{"label":"plaid hat", "correct":false}, {"label":"polka dot mittens", "correct":false}, {"label":"plaid mittens", "correct":false}, {"label":"None of the above", "correct":false}]
+    },
+    {
+        "trialID": "catch",
+        "image": "scrapbook_adj.png",
+        "dialogueTurn1": "Your scrapbook looks nice so far.", 
+        "dialogueTurn2": "Thanks. These pages are all pictures from when I worked at the cat cafe.", 
+        "dialogueTurn3": "That sounds like such a fun job.",
+        "targetSentence": "Where were the pictures in the scrapbook taken?",
+        "options": [{"label": "animal shelter", "correct":false}, {"label": "cat cafe", "correct":true}, {"label": "None of the above", "correct":false}, {"label": "The dialogue doesn't specify", "correct":false}]
+    },
+    {
+        "trialID": "catch",
+        "image": "sportspray.png",
+        "dialogueTurn1": "That coconut sunscreen is half off. We should get some for vacation.",
+        "dialogueTurn2": "We do need sunscreen, but I don't think that one's waterproof, and we're going to the beach.",
+        "dialogueTurn3": "Oh, you're right. Let's get a different one; the sport kind might be better.",
+        "targetSentence": "What was the reason for not purchasing the coconut sunscreen?",
+        "options": [{"label": "It isn't waterproof", "correct":true}, {"label": "Someone has a coconut allergy", "correct":false}, {"label": "None of the above", "correct":false}, {"label": "The dialogue doesn't specify", "correct":false}]
     }
+
 ]
