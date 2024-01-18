@@ -5,9 +5,8 @@
       <v-col cols="4">
 
         <v-row justify="end">
-          <v-img :src="'images/' + currentItem.image" @loadstart="imageLoading = true"
-            @load="imageLoading = false" width="345" height="230" max-width="345" max-height="230"
-            class="mr-2 mt-2">
+          <v-img :src="'images/' + currentItem?.image" @loadstart="imageLoading = true" @load="imageLoading = false"
+            width="345" height="230" max-width="345" max-height="230" class="mr-2 mt-2">
             <template v-slot:error>
               <p style="text-align:center;color:red">Could not load image. Try refreshing the page</p>
             </template>
@@ -45,12 +44,14 @@
 
 
           <div v-if="state == 'listen' || state == 'rate1' || state == 'rate2' || state == 'rate3' || state == 'rate4'">
-            <v-alert border="end" border-color="deep-orange accent-4" elevation="2" class="mb-2 ml-8" id="targetQuestionDiv">
+            <v-alert border="end" border-color="deep-orange accent-4" elevation="2" class="mb-2 ml-8"
+              id="targetQuestionDiv">
               {{ currentItem.dialogueTurn3 }}
             </v-alert>
             <v-alert border="start" border-color="deep-purple accent-4" elevation="2" class="mr-8">
               <div class="d-flex justify-center">
-                <v-btn size="large" :disabled="isPlaying" :loading="isLoading" @click="playAudio" class="ma-1" id="targetSentenceSoundButton">
+                <v-btn size="large" :disabled="isPlaying" :loading="isLoading" @click="playAudio" class="ma-1"
+                  id="targetSentenceSoundButton">
                   <v-progress-circular :v-fade-transition="false" :model-value="playProgress"
                     class="mr-1"><v-icon>play_circle_filled</v-icon>
                   </v-progress-circular>
@@ -85,6 +86,28 @@
 
             </section>
 
+          </div>
+
+          <div v-if="state == 'catch'">
+            <v-alert border="end" border-color="deep-orange accent-4" elevation="2" class="mb-2 ml-8"
+              id="targetQuestionDiv">
+              {{ currentItem?.dialogueTurn3 }}
+            </v-alert>
+            <div class="d-flex justify-center mb-4">
+              <div class="d-flex flex-column elevation-4 mt-4 pa-2" style="border-radius: 4px;" id="targetSentenceDiv">
+                <h2 class="ml-2 font-weight-regular" v-html="targetSentence"></h2>
+              </div>
+            </div>
+            <div class="d-flex flex-column align-center">
+              <v-radio-group v-model="response">
+                <v-radio v-for="(option, key) in currentItem?.options" :key="key" :label="option.label"
+                  :value="option"></v-radio>
+              </v-radio-group>
+            </div>
+            <v-row justify="center">
+              <v-btn color="blue-grey" class="mt-4 mb-4" @click="submit" :disabled="response == null">Submit
+                <v-icon>chevron_right</v-icon></v-btn>
+            </v-row>
           </div>
         </v-fade-transition>
       </v-col>
@@ -146,7 +169,7 @@ const steps = [
         next: false
       }
     }
-  },    
+  },
   {
     attachTo: { element: '#ratingDiv' }, content: { title: "Select your rating for the word in red, then click submit to rate the next underlined word." }, options: {
       hideButtons: {
@@ -173,13 +196,13 @@ const steps = [
         next: true
       }
     }
-  },   
+  },
 ]
 const wrapper = ref(null);
 const { start, goToStep, finish } = useVOnboarding(wrapper);
 const tourComplete = () => {
   Swal.fire({
-    title:"Practice Complete",
+    title: "Practice Complete",
     icon: "info",
     text: "Practice complete. Click 'start' to close this popup and begin the experiment. You will see the first trial's dialogue immediately; make sure to read it before clicking 'next'.",
     confirmButtonText: 'Start'
@@ -190,21 +213,22 @@ const tourComplete = () => {
 const store = useStore();
 const router = useRouter();
 
-const state = ref('dialogue');//dialogue, listen, rate1, rate2, rate3, rate4
+const state = ref('dialogue');//dialogue, listen, rate1, rate2, rate3, rate4, catch
 const targetSentence = ref("");
 
 const slowDown = ref(true);
-const isPractice = computed(()=>currentItem.value.isPractice === true);
-const currentItem = computed(()=>store.list[store.index]);
+const isPractice = computed(() => currentItem.value.isPractice === true);
+const isCatchTrial = computed(() => currentItem.value.trialID.startsWith("catch"));
+const currentItem = computed(() => store.list[store.index]);
 
 const doSlowDown = async () => {
   slowDown.value = true
   await wait(1000);
   slowDown.value = false
-  if(isPractice.value == true){
+  if (isPractice.value == true) {
     start();
   }
-  
+
 }
 onMounted(() => {
   doSlowDown();
@@ -214,25 +238,30 @@ const imageLoading = ref(false)
 
 const next = async () => {
   if (state.value == 'dialogue') {
-    state.value = "listen"
     targetSentence.value = currentItem.value.targetSentence;
-    if(isPractice.value == true){
-      goToStep(1)
+    if (isCatchTrial.value == true) {
+      state.value = "catch";
+    } else {
+      state.value = "listen"
+      if (isPractice.value == true) {
+        goToStep(1)
+      }
     }
+
   } else if (state.value == 'listen') {
     state.value = "rate1"
     targetSentence.value = getHighlightWord(currentItem.value.targetSentence, currentItem.value.targetWord1, [currentItem.value.targetWord2, currentItem.value.targetWord3, currentItem.value.targetWord4]);
-    if(isPractice.value == true){
+    if (isPractice.value == true) {
       goToStep(3)
     }
   } else if (state.value == 'rate1') {
     state.value = "rate2"
     targetSentence.value = getHighlightWord(currentItem.value.targetSentence, currentItem.value.targetWord2, [currentItem.value.targetWord1, currentItem.value.targetWord3, currentItem.value.targetWord4]);
-    if(isPractice.value == true){
+    if (isPractice.value == true) {
       goToStep(5)
     }
-  } else if (state.value == 'rate2') {
-    if(isPractice.value == true){
+  } else if (state.value == 'rate2' || state.value == 'catch') {
+    if (isPractice.value == true) {
       finish()
     }
 
@@ -259,7 +288,7 @@ const getHighlightWord = (targetSentence, index, otherIndexes) => {
     } else {
       let found = 0;
       for (let k = 0; k < otherIndexes.length; k++) {
-        if (otherIndexes[k]-1 == i) {
+        if (otherIndexes[k] - 1 == i) {
           found = 1
           break;
         }
@@ -307,8 +336,14 @@ const submit = async () => {
 
 const saveResponses = () => {
   let dataToSave = { ...currentItem.value }
-  dataToSave.response1 = allResponses.value[0];
-  dataToSave.response2 = allResponses.value[1];
+  if(isCatchTrial.value == true){
+    dataToSave.response1 = allResponses.value[0].label;
+    dataToSave.catchSucceed = allResponses.value[0].correct;
+  } else {
+    dataToSave.response1 = allResponses.value[0];
+    dataToSave.response2 = allResponses.value[1];
+  }
+  
   //dataToSave.response3 = allResponses.value[2];
   //dataToSave.response4 = allResponses.value[3];
   dataToSave.timestamp = serverTimestamp();
@@ -317,7 +352,7 @@ const saveResponses = () => {
   allResponses.value = [];
 }
 
-const progress = computed(()=>(store.index+1) + "/" + store.list.length);
+const progress = computed(() => (store.index + 1) + "/" + store.list.length);
 
 </script>
 

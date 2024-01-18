@@ -1,6 +1,6 @@
 [
     {
-        "trialID": "catch",
+        "trialID": "catch1", 
         "image": "checkeredbinder.png",
         "dialogueTurn1": "Does Stella need anything else for the new school year?",
         "dialogueTurn2": "Yes, something to keep their science worksheets in.",
@@ -9,7 +9,7 @@
         "options": [{"label":"math", "correct":false}, {"label":"history", "correct":false}, {"label":"science", "correct":true}, {"label":"None of the above", "correct":false}]
     },
     {
-        "trialID": "catch",
+        "trialID": "catch2",
         "image": "fudgeshake.png",
         "dialogueTurn1": "I don't know what to order; everything looks so good.",
         "dialogueTurn2": "Last time I ordered a strawberry sundae and it was delicious.",
@@ -18,16 +18,16 @@
         "options": [{"label":"hot fudge sundae", "correct":false}, {"label":"strawberry sundae", "correct":true}, {"label":"strawberry milkshake", "correct":false}, {"label":"chocolate milkshake", "correct":false}]
     },
     {
-        "trialID": "catch",
+        "trialID": "catch3",
         "image": "plaidscarf.png",
         "dialogueTurn1": "Wow, winter accessories are buy one, get one free.",
         "dialogueTurn2": "Oh, nice! I really need a new pair of mittens.",
-        "dialgoueTurn3": "Do you like those plaid ones? They'd match your coat.",
+        "dialogueTurn3": "Do you like those plaid ones? They'd match your coat.",
         "targetSentence": "Which object was discussed in the previous dialogue?",
         "options": [{"label":"plaid hat", "correct":false}, {"label":"polka dot mittens", "correct":false}, {"label":"plaid mittens", "correct":false}, {"label":"None of the above", "correct":false}]
     },
     {
-        "trialID": "catch",
+        "trialID": "catch4",
         "image": "scrapbook_adj.png",
         "dialogueTurn1": "Your scrapbook looks nice so far.", 
         "dialogueTurn2": "Thanks. These pages are all pictures from when I worked at the cat cafe.", 
@@ -36,7 +36,7 @@
         "options": [{"label": "animal shelter", "correct":false}, {"label": "cat cafe", "correct":true}, {"label": "None of the above", "correct":false}, {"label": "The dialogue doesn't specify", "correct":false}]
     },
     {
-        "trialID": "catch",
+        "trialID": "catch5",
         "image": "sportspray.png",
         "dialogueTurn1": "That coconut sunscreen is half off. We should get some for vacation.",
         "dialogueTurn2": "We do need sunscreen, but I don't think that one's waterproof, and we're going to the beach.",
