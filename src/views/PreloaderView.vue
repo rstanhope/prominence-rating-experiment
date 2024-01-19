@@ -73,6 +73,18 @@ onMounted(async () => {
       let practiceList = await fp.json();
       practiceList[0].isPractice = true;
 
+      //load catch trials
+      const ct = await fetch("list_catch.json");
+      let catchList = await ct.json();
+      catchList = shuffle(catchList);
+
+      //insert catch trials
+      const catchTrialPositions = [2, 7, 11, 16, 20];
+
+      for(let p=0;p<catchTrialPositions.length;p++){
+        store.list.splice(catchTrialPositions[p], 0, catchList[p]);
+      }
+
       //prepend practice list to regular list
       store.list = practiceList.concat(store.list)
       
