@@ -1,7 +1,7 @@
 [
   {
     "trialID": "practice",
-    "image": "white_background.png",
+    "image": "practiceimage.png",
     "dialogueTurn1": "Do you want to split a lunch combo? I just want some fries, but the combo's only a dollar more.",
     "dialogueTurn2": "Sure!",
     "dialogueTurn3": "Which entree do you want me to get?",

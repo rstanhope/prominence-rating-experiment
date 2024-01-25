@@ -24,7 +24,7 @@
         "dialogueTurn2": "Oh, nice! I really need a new pair of mittens.",
         "dialogueTurn3": "Do you like those plaid ones? They'd match your coat.",
         "targetSentence": "Which object was discussed in the previous dialogue?",
-        "options": [{"label":"plaid hat", "correct":false}, {"label":"polka dot mittens", "correct":false}, {"label":"plaid mittens", "correct":false}, {"label":"None of the above", "correct":false}]
+        "options": [{"label":"plaid hat", "correct":false}, {"label":"polka dot mittens", "correct":false}, {"label":"plaid mittens", "correct":true}, {"label":"None of the above", "correct":false}]
     },
     {
         "trialID": "catch4",
