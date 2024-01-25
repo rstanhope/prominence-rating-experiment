@@ -1,5 +1,30 @@
 <template>
-  <VOnboardingWrapper ref="wrapper" :steps="steps" @finish="tourComplete"></VOnboardingWrapper>
+  <VOnboardingWrapper ref="wrapper" :steps="steps"></VOnboardingWrapper>
+  <v-dialog v-model="showFullPicture" persistent fullscreen :scrim="false" z-index="10">
+    <v-card> 
+      <div class="d-flex flex-column">
+        <div class="d-flex justify-center mt-4">
+          <v-img :src="'images/' + currentItem?.image" max-width="800" id="fullPictureDiv"
+            @loadstart="imageLoading = true" @load="imageLoading = false; startPractice()">
+            <template v-slot:error>
+              <p style="text-align:center;color:red">Could not load image. Try refreshing the page</p>
+            </template>
+            <template v-slot:placeholder >
+              <div class="d-flex align-center justify-center fill-height">
+                <v-progress-circular color="grey-lighten-4" indeterminate></v-progress-circular>
+              </div>
+            </template>
+          </v-img>
+        </div>
+        <div class="d-flex justify-center mt-2">
+          <v-btn id="fullPictureNextBtn" color="blue-grey" :disabled="slowDown || imageLoading" @click="next()">Next
+            <v-icon>chevron_right</v-icon></v-btn>
+        </div>
+      </div>
+
+    </v-card>
+
+  </v-dialog>
   <v-container>
     <v-row>
       <v-col cols="4">
@@ -135,6 +160,24 @@ import Swal from 'sweetalert2';
 //practice trial on-boarding
 const steps = [
   {
+    attachTo: { element: '#fullPictureDiv' }, content: { title: "This picture is part of the upcoming dialogue. Please look at it carefully." }, options: {
+      hideButtons: {
+        exit: true,
+        previous: true,
+        next: false
+      }
+    }
+  },
+  {
+    attachTo: { element: '#fullPictureNextBtn' }, content: { title: "Click 'NEXT' to view the conversation" }, options: {
+      hideButtons: {
+        exit: true,
+        previous: true,
+        next: true
+      }
+    }
+  },  
+  {
     attachTo: { element: '#dialogueDiv' }, content: { title: "This is a conversation between two people. Please read it carefully. When you see the animated dots, that means the conversation will continue after you click the 'next' button. Click 'next' when you're ready." }, options: {
       hideButtons: {
         exit: true,
@@ -200,15 +243,8 @@ const steps = [
 ]
 const wrapper = ref(null);
 const { start, goToStep, finish } = useVOnboarding(wrapper);
-const tourComplete = () => {
-  Swal.fire({
-    title: "Practice Complete",
-    icon: "info",
-    text: "Practice complete. Click 'start' to close this popup and begin the experiment. You will see the first trial's dialogue immediately; make sure to read it before clicking 'next'.",
-    confirmButtonText: 'Start'
-  })
-}
 
+const showFullPicture = ref(true);
 
 const store = useStore();
 const router = useRouter();
@@ -221,30 +257,45 @@ const isPractice = computed(() => currentItem.value.isPractice === true);
 const isCatchTrial = computed(() => currentItem.value.trialID.startsWith("catch"));
 const currentItem = computed(() => store.list[store.index]);
 
-const doSlowDown = async () => {
+const doSlowDown = async (duration = 1000) => {
   slowDown.value = true
-  await wait(1000);
+  await wait(duration);
   slowDown.value = false
+
+
+}
+onMounted(async () => {
+    await doSlowDown(2000);
+})
+
+const startPractice = async () => {
+  await wait(500);
   if (isPractice.value == true) {
     start();
   }
-
 }
-onMounted(() => {
-  doSlowDown();
-})
 
 const imageLoading = ref(false)
 
 const next = async () => {
   if (state.value == 'dialogue') {
+    if(showFullPicture.value == true){
+      showFullPicture.value = false;
+      if(isPractice.value == true){
+        console.log("goto step")
+        goToStep(2)
+      } else {
+        doSlowDown(2000);
+      }
+      return; 
+    }
     targetSentence.value = currentItem.value.targetSentence;
     if (isCatchTrial.value == true) {
       state.value = "catch";
     } else {
       state.value = "listen"
       if (isPractice.value == true) {
-        goToStep(1)
+        goToStep(3)
       }
     }
 
@@ -252,17 +303,23 @@ const next = async () => {
     state.value = "rate1"
     targetSentence.value = getHighlightWord(currentItem.value.targetSentence, currentItem.value.targetWord1, [currentItem.value.targetWord2, currentItem.value.targetWord3, currentItem.value.targetWord4]);
     if (isPractice.value == true) {
-      goToStep(3)
+      goToStep(5)
     }
   } else if (state.value == 'rate1') {
     state.value = "rate2"
     targetSentence.value = getHighlightWord(currentItem.value.targetSentence, currentItem.value.targetWord2, [currentItem.value.targetWord1, currentItem.value.targetWord3, currentItem.value.targetWord4]);
     if (isPractice.value == true) {
-      goToStep(5)
+      goToStep(7)
     }
   } else if (state.value == 'rate2' || state.value == 'catch') {
     if (isPractice.value == true) {
-      finish()
+      finish();
+      await Swal.fire({
+        title: "Practice Complete",
+        icon: "info",
+        text: "Practice complete. Click 'start' to close this popup and begin the experiment. You will see the first trial's dialogue immediately; make sure to read it before clicking 'next'.",
+        confirmButtonText: 'Start'
+      })
     }
 
     saveResponses();
@@ -272,7 +329,8 @@ const next = async () => {
       router.push("/end")
     } else {
       state.value = 'dialogue';
-      doSlowDown();
+      showFullPicture.value = true;
+      doSlowDown(2000);
     }
 
   }
@@ -336,14 +394,14 @@ const submit = async () => {
 
 const saveResponses = () => {
   let dataToSave = { ...currentItem.value }
-  if(isCatchTrial.value == true){
+  if (isCatchTrial.value == true) {
     dataToSave.response1 = allResponses.value[0].label;
     dataToSave.catchSucceed = allResponses.value[0].correct;
   } else {
     dataToSave.response1 = allResponses.value[0];
     dataToSave.response2 = allResponses.value[1];
   }
-  
+
   //dataToSave.response3 = allResponses.value[2];
   //dataToSave.response4 = allResponses.value[3];
   dataToSave.timestamp = serverTimestamp();
@@ -358,6 +416,10 @@ const progress = computed(() => (store.index + 1) + "/" + store.list.length);
 
 
 <style>
+:root {
+  --v-onboarding-overlay-z: 12;
+}
+
 .highlight {
   color: red;
   text-decoration: underline;
