@@ -1,71 +1,71 @@
 [
-    {
-      "trialID": "cats2y",
-      "image": "cats_2.png",
-      "dialogueTurn1": "I can’t believe we’re finally adopting a cat.",
-      "dialogueTurn2": "Yeah, I’m so excited!",
-      "dialogueTurn3": "Do you have a favorite yet? I think maybe I like the striped one, but they’re both so cute.",
-      "targetSentence": "hmm I want a playful cat and the calico one looks full of energy",
-      "audio": "cat_1221.mp3",
-      "targetWord1": 5,
-      "targetWord2": 9
-    },
-    {
-        "trialID": "pizzami",
-        "image": "pizza_many_indiscrete.png",
-        "dialogueTurn1": "We need to eat some of the leftover pizza.",
-        "dialogueTurn2": "I'll have a slice.",
-        "dialogueTurn3": "Okay, take your pick. We have so many slices, all different kinds.",
-        "targetSentence": "well I'm in the mood for something with meat and the pepperoni slice looks tasty",
-        "audio": "pizza_1221.mp3",
-        "targetWord1": 5,
-        "targetWord2": 12
-    },
-    {
-      "trialID": "puzzlemd",
-      "image": "puzzle_many_discrete.png",
-      "dialogueTurn1": "Are you stumped? You look like you’re really concentrating.",
-      "dialogueTurn2": "I’m just looking for more pieces that go in this area.",
-      "dialogueTurn3": "Do you want any of the pieces I’ve sorted out from the pile? There are so many, surely one will fit.",
-      "targetSentence": "hmm I'm working on a tree and the triangular one might fit here",
-      "audio": "puzzle_1221.mp3",
-      "targetWord1": 3,
-      "targetWord2": 9
-    },
-    {
-        "trialID": "sauce3n",
-           "image": "sauce_3.png",
-           "dialogueTurn1": "I made sandwiches, are you having one?",
-           "dialogueTurn2": "Yeah, thanks.",
-           "dialogueTurn3": "There are several sauces on the table if you want any. They’re all pretty good, you should try one!",
-           "targetSentence": "hmm I'm craving something spicy and the buffalo sauce looks tasty",
-           "audio": "sauce_1221.mp3",
-           "targetWord1": 5 ,
-           "targetWord2": 8
-   },
-   {
+  {
+   "trialID": "cats2y",
+    "image": "cats_2.png",
+    "dialogueTurn1": "I can’t believe we’re finally adopting a cat.",
+    "dialogueTurn2": "Yeah, I’m so excited!",
+    "dialogueTurn3": "Do you have a favorite yet? I think maybe I like the striped one, but they’re both so cute.",
+    "targetSentence": "hmm I want a playful cat and the calico one looks full of energy",
+    "audio": "cat_1221.mp3",
+    "targetWord1": 5,
+    "targetWord2": 9
+  },
+  {
+    "trialID": "pizzami",
+    "image": "pizza_many_indiscrete.png",
+    "dialogueTurn1": "We need to eat some of the leftover pizza.",
+    "dialogueTurn2": "I'll have a slice.",
+    "dialogueTurn3": "Okay, take your pick. We have so many slices, all different kinds.",
+    "targetSentence": "well I'm in the mood for something with meat and the pepperoni slice looks tasty",
+    "audio": "pizza_1221.mp3",
+    "targetWord1": 5,
+    "targetWord2": 12
+  },
+  {
+    "trialID": "puzzlemd",
+    "image": "puzzle_many_discrete.png",
+    "dialogueTurn1": "Are you stumped? You look like you’re really concentrating.",
+    "dialogueTurn2": "I’m just looking for more pieces that go in this area.",
+    "dialogueTurn3": "Do you want any of the pieces I’ve sorted out from the pile? There are so many, surely one will fit.",
+    "targetSentence": "hmm I'm working on a tree and the triangular one might fit here",
+    "audio": "puzzle_1221.mp3",
+    "targetWord1": 3,
+    "targetWord2": 9
+  },
+  {
+    "trialID": "sauce3n",
+    "image": "sauce_3.png",
+    "dialogueTurn1": "I made sandwiches, are you having one?",
+    "dialogueTurn2": "Yeah, thanks.",
+    "dialogueTurn3": "There are several sauces on the table if you want any. They’re all pretty good, you should try one!",
+    "targetSentence": "hmm I'm craving something spicy and the buffalo sauce looks tasty",
+    "audio": "sauce_1221.mp3",
+    "targetWord1": 5 ,
+    "targetWord2": 8
+  },
+  {
     "trialID": "tshirts3y",
-       "image": "tshirts_3.png",
-       "dialogueTurn1": "Are you going to buy anything?",
-       "dialogueTurn2": "I want to get a t-shirt.",
-       "dialogueTurn3": " There are several options here. I like the green one, and the pink one seems to be your style.",
-       "targetSentence": "well I'm looking for a good deal and the yellow one is on sale",
-       "audio": "tshirts_1221.mp3",
-       "targetWord1": 3,
-       "targetWord2": 10
-    },
-    {
-        "trialID": "yarn2n",
-           "image": "yarn_2.png",
-           "dialogueTurn1": "Can I help you find anything today?",
-           "dialogueTurn2": "Yes, I’m looking for a bulky weight yarn to crochet a blanket with.",
-           "dialogueTurn3": "Okay, we have two bulky weight yarns right now. They’re both 100% acrylic fibers. Hopefully one of these works for your project.",
-           "targetSentence": "hmm I'm looking for a warm color and the orange yarn would be perfect",
-           "audio": "yarn_1221.mp3",
-           "targetWord1": 6,
-           "targetWord2": 10
-   },
-   {
+    "image": "tshirts_3.png",
+    "dialogueTurn1": "Are you going to buy anything?",
+    "dialogueTurn2": "I want to get a t-shirt.",
+    "dialogueTurn3": " There are several options here. I like the green one, and the pink one seems to be your style.",
+    "targetSentence": "well I'm looking for a good deal and the yellow one is on sale",
+    "audio": "tshirts_1221.mp3",
+    "targetWord1": 3,
+    "targetWord2": 10
+  },
+  {
+    "trialID": "yarn2n",
+    "image": "yarn_2.png",
+    "dialogueTurn1": "Can I help you find anything today?",
+    "dialogueTurn2": "Yes, I’m looking for a bulky weight yarn to crochet a blanket with.",
+    "dialogueTurn3": "Okay, we have two bulky weight yarns right now. They’re both 100% acrylic fibers. Hopefully one of these works for your project.",
+    "targetSentence": "hmm I'm looking for a warm color and the orange yarn would be perfect",
+    "audio": "yarn_1221.mp3",
+    "targetWord1": 6,
+    "targetWord2": 10
+  },
+  {
     "trialID": "sc1_verb",
     "image": "sc1_verb.png",
     "dialogueTurn1": "I saw the photos you took at your sister's graduation party, they were beautiful!",
