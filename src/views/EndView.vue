@@ -10,13 +10,18 @@
 
 <script setup>
 import { onMounted } from 'vue';
+import { useStore } from "@/stores/store.js"
+
+const store = useStore();
 
 onMounted(()=>{
     window.onbeforeunload = null;
 })
 
 const submit = () => {
-    const completionUrl = "https://app.prolific.com/submissions/complete?cc=CE1VM3Y5";
+    //replace this with your Sona study provided completion URL
+    let completionUrl = "https://northwestern-linguistics.sona-systems.com/webstudy_credit.aspx?experiment_id=1234&credit_token=123&survey_code=";
+    completionUrl += store.pid;
     window.location.replace(completionUrl);
 }
 </script>
