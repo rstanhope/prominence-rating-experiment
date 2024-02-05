@@ -326,7 +326,7 @@ const next = async () => {
 
     store.index += 1;
     if (store.index >= store.list.length) {
-      router.push("/end")
+      router.push("/demographics")
     } else {
       state.value = 'dialogue';
       showFullPicture.value = true;

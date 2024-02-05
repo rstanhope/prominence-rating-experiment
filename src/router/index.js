@@ -9,7 +9,7 @@ const router = createRouter({
       name: 'preloader',
       component: () => import('../views/PreloaderView.vue'),
       meta: { oneWay: true }
-    },
+    }, 
     {
       path: '/audioTest',
       name: 'audioTest',
@@ -42,6 +42,12 @@ const router = createRouter({
       component: () => import('../views/ExperimentView.vue'),
       meta: { oneWay: true }
     },
+    {
+      path: '/demographics',
+      name: 'demographics',
+      component: () => import('../views/DemographicsView.vue'),
+      meta: { oneWay: true }
+    },       
     {
       path: '/end',
       name: 'end',
