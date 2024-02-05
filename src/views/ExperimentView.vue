@@ -160,7 +160,7 @@ import Swal from 'sweetalert2';
 //practice trial on-boarding
 const steps = [
   {
-    attachTo: { element: '#fullPictureDiv' }, content: { title: "This picture is part of the upcoming dialogue. Please look at it carefully." }, options: {
+    attachTo: { element: '#fullPictureDiv' }, content: { title: "At the beginning of every trial, you will see a picture that relates to the upcoming conversation. It may show objects, actions, or possibilities that are being discussed." }, options: {
       hideButtons: {
         exit: true,
         previous: true,
@@ -178,7 +178,7 @@ const steps = [
     }
   },  
   {
-    attachTo: { element: '#dialogueDiv' }, content: { title: "This is a conversation between two people. Please read it carefully. When you see the animated dots, that means the conversation will continue after you click the 'next' button. Click 'next' when you're ready." }, options: {
+    attachTo: { element: '#dialogueDiv' }, content: { title: "Please read the dialogue carefully. When you see the animated dots, that means the conversation will continue after you click the 'next' button. Click 'next' when you're ready." }, options: {
       hideButtons: {
         exit: true,
         previous: true,
@@ -232,7 +232,7 @@ const steps = [
     }
   },
   {
-    attachTo: { element: '#ratingDiv' }, content: { title: "Again, select your rating for the word in red, then click submit. Remember that you can listen to the sentence again if needed." }, options: {
+    attachTo: { element: '#ratingDiv' }, content: { title: "Again, select your rating for the word in red, then click submit. Remember that you can click above to listen to the sentence again if needed." }, options: {
       hideButtons: {
         exit: true,
         previous: true,
@@ -317,7 +317,7 @@ const next = async () => {
       await Swal.fire({
         title: "Practice Complete",
         icon: "info",
-        text: "Practice complete. Click 'start' to close this popup and begin the experiment. You will see the first trial's dialogue immediately; make sure to read it before clicking 'next'.",
+        text: "You have completed the practice. Throughout the experiment, you will repeat the process of reading a conversation, listening to a spoken response, and rating words. Occasionally, instead of rating words, you will be asked a question about the dialogue. When you are ready, click 'start' to close this popup and begin the experiment.",
         confirmButtonText: 'Start'
       })
     }

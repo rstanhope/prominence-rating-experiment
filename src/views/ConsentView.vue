@@ -81,8 +81,7 @@
     <p>
       Participation in research is voluntary. You can decide to participate or not to participate.
       If you do not want to be in this study or you decide to withdraw from the study at any point,
-      your decision will not affect your relationship with Northwestern University. If you withdraw
-      from the study, you will be paid for the portion you completed.
+      your decision will not affect your relationship with Northwestern University.
     </p>
     <p>
       If you decide to withdraw from this study, any data already collected from you will be destroyed.
@@ -129,8 +128,7 @@
       <strong>Will I be paid or given anything for taking part in this study?</strong>
     </p>
     <p>
-      You will be paid for your time at a rate of $13.70 per hour. If you voluntarily withdraw from the study before completion,
-      you will be paid for the portion that you completed.
+      You will be paid for your time at a rate of $13.70 per hour.
     </p>
     <p>
       <strong>Who can I talk to?</strong>
