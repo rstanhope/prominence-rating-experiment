@@ -20,7 +20,7 @@ onMounted(()=>{
 
 const submit = () => {
     //replace this with your Sona study provided completion URL
-    let completionUrl = "https://northwestern-linguistics.sona-systems.com/webstudy_credit.aspx?experiment_id=1234&credit_token=123&survey_code=";
+    let completionUrl = "https://northwestern-linguistics.sona-systems.com/webstudy_credit.aspx?experiment_id=166&credit_token=2cf128b5e84d4f31aa651f239ed8588e&survey_code=";
     completionUrl += store.pid;
     window.location.replace(completionUrl);
 }
