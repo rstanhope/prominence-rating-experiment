@@ -27,8 +27,7 @@
     </p>
 
     <p><strong>Why am I being asked to take part in this research study?</strong></p>
-    <p>We are asking you to take part in this research study because you are a native speaker
-       of American English and over 18 years old.</p>
+    <p>We are asking you to take part in this research study because you are a student enrolled in a 200-level Linguistics course at Northwestern University.</p>
 
 
     <p class="mt-5">
@@ -128,7 +127,8 @@
       <strong>Will I be paid or given anything for taking part in this study?</strong>
     </p>
     <p>
-      You will be paid for your time at a rate of $13.70 per hour.
+      You will receive 1 credit towards fulfillment of the Linguistics class experimental requirement on initiation of the experiment. 
+      If you withdraw from this study before you complete the experiment, you will still receive course credit.
     </p>
     <p>
       <strong>Who can I talk to?</strong>
