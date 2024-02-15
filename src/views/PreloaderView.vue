@@ -46,8 +46,36 @@ onMounted(async () => {
     })
   } else {
     let listToLoad;
-    if (route.query.list != "fb") {
+    if (route.query.list == "fb") {
+      //firebase - across subject design
+      let snapshot = await get(child(dbRef(getDatabase()), "/list/"));
+      if (snapshot.exists()) {
+        listToLoad = snapshot.val() + ".json"; 
+      } else {
+        Swal.fire({
+          icon: 'error',
+          title: "Error",
+          text: "Unable to load list file"
+        })
+        return null;
+      }
+      loadAcrossSubjectDesignList(listToLoad);
+    }else if(route.query.list == "within"){
+      //within subject design
+      loadWithinSubjectDesignList();
+    }else{
+      //urlparam defined list - across subject design
       listToLoad = route.query.list + ".json"
+      loadAcrossSubjectDesignList(listToLoad);
+    }
+
+    if (route.query.list != "fb") {
+      console.log("not fb")
+      if (route.query.list == "within") {
+        console.log("within subject design");
+      } else {
+        listToLoad = route.query.list + ".json"
+      }
     } else {
       let snapshot = await get(child(dbRef(getDatabase()), "/list/"));
       if (snapshot.exists()) {
@@ -61,8 +89,11 @@ onMounted(async () => {
         return null;
       }
     }
+  }
+})
 
-    try {
+async function loadAcrossSubjectDesignList(listToLoad){
+  try {
       const f = await fetch(listToLoad);
       store.list = await f.json();
       store.list = shuffle(store.list);
@@ -98,8 +129,12 @@ onMounted(async () => {
         text: "Could not load " + route.query.list + ".json"
       })
     }
-  }
-})
+}
+
+function loadWithinSubjectDesignList(){
+  console.log("within subject design");
+}
+
 
 function shuffle(array) {
   var m = array.length, t, i;
