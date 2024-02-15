@@ -45,6 +45,7 @@ onMounted(async () => {
       text: "Missing list file URL parameter"
     })
   } else {
+    store.listFilename = route.query.list;
     let listToLoad;
     if (route.query.list == "fb") {
       //firebase - across subject design
