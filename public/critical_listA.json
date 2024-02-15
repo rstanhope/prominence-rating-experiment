@@ -10,7 +10,7 @@
     "audio": "sc1_verb_1221_re.mp3",
     "targetWord1": 2,
     "targetWord2": 4,
-    "order":"A"
+    "order": "A"
   },
   {
     "trialID": "sc2_verb",
@@ -23,7 +23,7 @@
     "audio": "sc2_verb_1221_re.mp3",
     "targetWord1": 2,
     "targetWord2": 5,
-    "order":"A"
+    "order": "A"
   },
   {
     "trialID": "sc3_adj",
@@ -36,7 +36,7 @@
     "audio": "sc3_adj_1221_re.mp3",
     "targetWord1": 2,
     "targetWord2": 4,
-    "order":"A"
+    "order": "A"
   },
   {
     "trialID": "sc4_adj",
@@ -49,7 +49,7 @@
     "audio": "sc4_adj_1221_re.mp3",
     "targetWord1": 2,
     "targetWord2": 4,
-    "order":"A"
+    "order": "A"
   },
   {
     "trialID": "cats3y",
@@ -62,7 +62,7 @@
     "audio": "cat_1221.mp3",
     "targetWord1": 5,
     "targetWord2": 9,
-    "order":"A"
+    "order": "A"
   },
   {
     "trialID": "pizza2y",
@@ -75,7 +75,7 @@
     "audio": "pizza_0208_1.mp3",
     "targetWord1": 5,
     "targetWord2": 12,
-    "order":"A"
+    "order": "A"
   },
   {
     "trialID": "puzzlemd",
@@ -88,7 +88,7 @@
     "audio": "puzzle_0208.mp3",
     "targetWord1": 3,
     "targetWord2": 9,
-    "order":"A"
+    "order": "A"
   },
   {
     "trialID": "sauce3y",
@@ -101,7 +101,7 @@
     "audio": "sauce_0208_1.mp3",
     "targetWord1": 3,
     "targetWord2": 8,
-    "order":"A"
+    "order": "A"
   },
   {
     "trialID": "tshirtsmd",
@@ -114,7 +114,7 @@
     "audio": "tshirts_0208.mp3",
     "targetWord1": 3,
     "targetWord2": 10,
-    "order":"A"
+    "order": "A"
   },
   {
     "trialID": "yarn2y",
@@ -127,7 +127,7 @@
     "audio": "yarn_0208.mp3",
     "targetWord1": 3,
     "targetWord2": 10,
-    "order":"A"
+    "order": "A"
   }
  ]
 

@@ -1,22 +1,24 @@
 [
   {
-    "trialID": "catch1",
-    "version": "withinParticipantDesign", 
-    "image": "checkeredbinder.png",
-    "dialogueTurn1": "Does Stella need anything else for the new school year?",
-    "dialogueTurn2": "Yes, something to keep their science worksheets in.",
-    "dialogueTurn3": "The polka dot binder is pretty cute.",
-    "targetSentence": "In the dialogue you just read, was a lunch box mentioned?",
-    "options": [{"label":"yes", "correct":false}, {"label":"no", "correct": true}, {"label": "not sure", "correct":false}]
+    "trialID": "catch3",
+    "version": "withinParticipantDesign",
+    "image": "plaidscarf.png",
+    "dialogueTurn1": "Wow, winter accessories are buy one, get one free.",
+    "dialogueTurn2": "Oh, nice! I really need a new pair of mittens.",
+    "dialogueTurn3": "Do you like those plaid ones? They'd match your coat.",
+    "targetSentence": "In the dialogue you just read, was a pair of plaid mittens mentioned?",
+    "options": [{"label":"yes", "correct":true}, {"label":"no", "correct": false}, {"label": "not sure", "correct":false}],
+    "order": 2
   },
   {
-    "trialID": "catch2",
-    "version": "withinParticipantDesign",  
-    "image": "fudgeshake.png",
-    "dialogueTurn1": "I don't know what to order; everything looks so good.",
-    "dialogueTurn2": "Last time I ordered a strawberry sundae and it was delicious.",
-    "dialogueTurn3": "That sounds tasty, but it might be messy, and I'm wearing white.",
-    "targetSentence": "In the dialogue you just read, was a strawberry sundae mentioned?",
-    "options": [{"label":"yes", "correct":true}, {"label":"no", "correct": false}, {"label": "not sure", "correct":false}]
-   }
+    "trialID": "catch4",
+    "version": "withinParticipantDesign",
+    "image": "scrapbook_adj.png",
+    "dialogueTurn1": "Your scrapbook looks nice so far.", 
+    "dialogueTurn2": "Thanks. These pages are all pictures from when I worked at the cat cafe.", 
+    "dialogueTurn3": "That sounds like such a fun job.",
+    "targetSentence": "Were the pictures in the scrapbook taken at a cat cafe?",
+    "options": [{"label":"yes", "correct":true}, {"label":"no", "correct": false}, {"label": "not sure", "correct":false}],
+    "order": 2
+  }
 ]

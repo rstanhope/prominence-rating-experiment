@@ -7,7 +7,8 @@
     "dialogueTurn2": "Yes, something to keep their science worksheets in.",
     "dialogueTurn3": "The polka dot binder is pretty cute.",
     "targetSentence": "In the dialogue you just read, was a lunch box mentioned?",
-    "options": [{"label":"yes", "correct":false}, {"label":"no", "correct": true}, {"label": "not sure", "correct":false}]
+    "options": [{"label":"yes", "correct":false}, {"label":"no", "correct": true}, {"label": "not sure", "correct":false}],
+    "order": 1
   },
   {
     "trialID": "catch2",
@@ -17,6 +18,7 @@
     "dialogueTurn2": "Last time I ordered a strawberry sundae and it was delicious.",
     "dialogueTurn3": "That sounds tasty, but it might be messy, and I'm wearing white.",
     "targetSentence": "In the dialogue you just read, was a strawberry sundae mentioned?",
-    "options": [{"label":"yes", "correct":true}, {"label":"no", "correct": false}, {"label": "not sure", "correct":false}]
+    "options": [{"label":"yes", "correct":true}, {"label":"no", "correct": false}, {"label": "not sure", "correct":false}],
+    "order": 1
    }
 ]
