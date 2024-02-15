@@ -109,7 +109,8 @@ const submit = () => {
         englishFirstLanguage: englishFirstLanguage.value,
         englishLanguageAge: englishLanguageAge.value,
         bornInUS: bornInUS.value,
-        internationalStudent: internationalStudent.value
+        internationalStudent: internationalStudent.value,
+        blockOrder: store.blockOrder
     })
         .then(() => {
             router.push("/end");

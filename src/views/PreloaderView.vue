@@ -137,7 +137,7 @@ async function loadWithinSubjectDesignList() {
   let order = ["A", "B", "C"];
   let masterList = [];
   order = shuffle(order);
-  //TODO: save order to participant's Firebase record
+  store.blockOrder = order.join("-");
 
   for (let i = 0; i < order.length; i++) {
     //critical list
