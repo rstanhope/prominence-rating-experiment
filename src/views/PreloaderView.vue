@@ -120,7 +120,7 @@ async function loadAcrossSubjectDesignList(listToLoad) {
     //prepend practice list to regular list
     store.list = practiceList.concat(store.list)
 
-
+    //done loading list
     isLoading.value = false
   } catch (error) {
     console.log(error);
@@ -171,13 +171,21 @@ async function loadWithinSubjectDesignList() {
     list.splice(randomNumber(9,13), 0, catchTrials[1]);
 
     masterList = masterList.concat(list)
+    
+    
     //insert breaks between blocks
+    /*
     if (i < order.length - 1) {
       masterList = masterList.concat([{ trialID: "break" }]);
     }
+    */
   }
 
-  console.log(masterList);
+  //save to pinia
+  store.list = masterList;
+
+  //done loading list
+  isLoading.value = false
 }
 
 
