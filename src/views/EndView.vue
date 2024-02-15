@@ -42,7 +42,7 @@ const submit = () => {
     
     completionUrl += store.pid;
     
-    console.log(completionUrl);
-    //window.location.replace(completionUrl);
+    //console.log(completionUrl);
+    window.location.replace(completionUrl);
 }
 </script>
