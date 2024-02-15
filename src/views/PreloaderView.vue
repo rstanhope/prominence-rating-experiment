@@ -69,8 +69,8 @@ onMounted(async () => {
       loadAcrossSubjectDesignList(listToLoad);
     }
 
+    /*
     if (route.query.list != "fb") {
-      console.log("not fb")
       if (route.query.list == "within") {
         console.log("within subject design");
       } else {
@@ -89,6 +89,7 @@ onMounted(async () => {
         return null;
       }
     }
+    */
   }
 })
 
