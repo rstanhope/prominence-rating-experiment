@@ -1,0 +1,93 @@
+[
+  {
+    "trialID": "filler2",
+    "version": "withinParticipantDesign",
+    "image": "bird.png",
+    "dialogueTurn1": "You’re good at identifying birds, right?",
+    "dialogueTurn2": "I’ve read a field guide or two.",
+    "dialogueTurn3": "Do you think that’s an American Goldfinch outside?",
+    "targetSentence": "actually it looks like a lesser goldfinch because its back is totally black",
+    "audio": "bird.mp3",
+    "targetWord1": 10,
+    "targetWord2": 13,
+    "order": 2
+  },  
+  {
+    "trialID": "filler4",
+    "version": "withinParticipantDesign",
+    "image": "books.png",
+    "dialogueTurn1": "Have you read all of those books on your shelf?",
+    "dialogueTurn2": "Almost all of them. I just bought one yesterday, so I haven’t finished it yet.",
+    "dialogueTurn3": "Well, that’s impressive nonetheless. What’s the new one about?",
+    "targetSentence": "it's about an alien species making contact with earth",
+    "audio": "books.mp3",
+    "targetWord1": 4,
+    "targetWord2": 5,
+    "order": 2
+  }, 
+  {
+    "trialID": "filler5",
+    "version": "withinParticipantDesign",
+    "image": "cafe.png",
+    "dialogueTurn1": "Have you ever been to this café before?",
+    "dialogueTurn2": "Yes, a couple of times, actually.",
+    "dialogueTurn3": "I enjoy their pastries; they're always so fresh.",
+    "targetSentence": "their almond croissants have the most delicious filling",
+    "audio": "cafe.mp3",
+    "targetWord1": 2,
+    "targetWord2": 6,
+    "order": 2
+  },
+  {
+    "trialID": "filler8",
+    "version": "withinParticipantDesign",
+    "image": "costume.png",
+    "dialogueTurn1": "I can’t decide what to wear to the Halloween party tonight.",
+    "dialogueTurn2": "Do you want it to be scary?",
+    "dialogueTurn3": "I don’t really care, as long as it’s not uncomfortable to wear all night.",
+    "targetSentence": "that pumpkin mask seems comfortable so it might be a good choice",
+    "audio": "costume.mp3",
+    "targetWord1": 3,
+    "targetWord2": 12,
+    "order": 2
+  },
+  {
+    "trialID": "filler9",
+    "version": "withinParticipantDesign",
+    "image": "movies.png",
+    "dialogueTurn1": "I’m glad we decided to see a movie tonight.",
+    "dialogueTurn2": "Me too! Which one should we get tickets for?",
+    "dialogueTurn3": "I’m open to anything. Let me guess, you want to see the horror film.",
+    "targetSentence": "surprisingly I was actually thinking about the superhero one",
+    "audio": "movies.mp3",
+    "targetWord1": 8,
+    "targetWord2": 9,
+    "order": 2
+  }, 
+  {
+    "trialID": "filler10",
+    "version": "withinParticipantDesign",
+    "image": "racinggame.png",
+    "dialogueTurn1": "I used to play that racing game all the time as a kid.",
+    "dialogueTurn2": "Me too! ",
+    "dialogueTurn3": "I liked that you could customize the cars.",
+    "targetSentence": "I always removed the bumper since it made the car lighter and faster",
+    "audio": "racinggame.mp3",
+    "targetWord1": 3,
+    "targetWord2": 11,
+    "order": 2
+  },
+  {
+    "trialID": "filler12",
+    "version": "withinParticipantDesign",
+    "image": "stamps.png",
+    "dialogueTurn1": "I didn’t know you collected stamps.",
+    "dialogueTurn2": "I just started recently, when my dad gifted me some of his collection.",
+    "dialogueTurn3": "That’s cool! How old is your collection?",
+    "targetSentence": "most of it is from the eighties but the stamp with the fish is from nineteen fifty-six",
+    "audio": "stamps.mp3",
+    "targetWord1": 9,
+    "targetWord2": 15,
+    "order": 2
+  }
+]

@@ -50,7 +50,7 @@ onMounted(async () => {
       //firebase - across subject design
       let snapshot = await get(child(dbRef(getDatabase()), "/list/"));
       if (snapshot.exists()) {
-        listToLoad = snapshot.val() + ".json"; 
+        listToLoad = snapshot.val() + ".json";
       } else {
         Swal.fire({
           icon: 'error',
@@ -60,10 +60,10 @@ onMounted(async () => {
         return null;
       }
       loadAcrossSubjectDesignList(listToLoad);
-    }else if(route.query.list == "within"){
+    } else if (route.query.list == "within") {
       //within subject design
       loadWithinSubjectDesignList();
-    }else{
+    } else {
       //urlparam defined list - across subject design
       listToLoad = route.query.list + ".json"
       loadAcrossSubjectDesignList(listToLoad);
@@ -93,47 +93,91 @@ onMounted(async () => {
   }
 })
 
-async function loadAcrossSubjectDesignList(listToLoad){
+async function loadAcrossSubjectDesignList(listToLoad) {
   try {
-      const f = await fetch(listToLoad);
-      store.list = await f.json();
-      store.list = shuffle(store.list);
-      store.index = 0
+    const f = await fetch(listToLoad);
+    store.list = await f.json();
+    store.list = shuffle(store.list);
+    store.index = 0
 
-      //load practice list;
-      const fp = await fetch("list_practice.json");
-      let practiceList = await fp.json();
-      practiceList[0].isPractice = true;
+    //load practice list;
+    const fp = await fetch("list_practice.json");
+    let practiceList = await fp.json();
+    practiceList[0].isPractice = true;
 
-      //load catch trials
-      const ct = await fetch("list_catch.json");
-      let catchList = await ct.json();
-      catchList = shuffle(catchList);
+    //load catch trials
+    const ct = await fetch("list_catch.json");
+    let catchList = await ct.json();
+    catchList = shuffle(catchList);
 
-      //insert catch trials
-      const catchTrialPositions = [2, 7, 11, 16, 20];
+    //insert catch trials
+    const catchTrialPositions = [2, 7, 11, 16, 20];
 
-      for(let p=0;p<catchTrialPositions.length;p++){
-        store.list.splice(catchTrialPositions[p], 0, catchList[p]);
-      }
+    for (let p = 0; p < catchTrialPositions.length; p++) {
+      store.list.splice(catchTrialPositions[p], 0, catchList[p]);
+    }
 
-      //prepend practice list to regular list
-      store.list = practiceList.concat(store.list)
-      
+    //prepend practice list to regular list
+    store.list = practiceList.concat(store.list)
 
-      isLoading.value = false
-    } catch (error) {
-      console.log(error);
+
+    isLoading.value = false
+  } catch (error) {
+    console.log(error);
+    Swal.fire({
+      icon: 'error',
+      title: "Error",
+      text: "Could not load " + route.query.list + ".json"
+    })
+  }
+}
+
+async function loadWithinSubjectDesignList() {
+  let order = ["A", "B", "C"];
+  let masterList = [];
+  order = shuffle(order);
+  //TODO: save order to participant's Firebase record
+  
+  for (let i = 0; i < order.length; i++) {
+    //critical list
+    let f = await fetch("critical_list" + order[i] + ".json");
+    let criticalList = await f.json();
+
+    //filler list
+    f = await fetch("block" + (i + 1) + "_fillers.json");
+    let fillerList = await f.json();
+
+    //combine critical list and filler list
+    let list = criticalList.concat(fillerList);
+    list = shuffle(list);
+    for (let l of list) {
+      l.block = i + 1; //indicate which block each item belongs to
+    }
+
+    //load catch trials
+    f = await fetch("block" + (i + 1) + "_catch.json");
+    let catchTrials = await f.json();
+    //catch trials must have two items
+    if (catchTrials.length != 2) {
       Swal.fire({
         icon: 'error',
         title: "Error",
-        text: "Could not load " + route.query.list + ".json"
+        text: "Catch trials must have two items!"
       })
+      return null
     }
-}
+    //insert catch trials at controlled randomized positions
+    list.splice(randomNumber(2,4), 0, catchTrials[0]);
+    list.splice(randomNumber(9,13), 0, catchTrials[1]);
 
-function loadWithinSubjectDesignList(){
-  console.log("within subject design");
+    masterList = masterList.concat(list)
+    //insert breaks between blocks
+    if (i < order.length - 1) {
+      masterList = masterList.concat([{ trialID: "break" }]);
+    }
+  }
+
+  console.log(masterList);
 }
 
 
@@ -147,6 +191,10 @@ function shuffle(array) {
   }
   return array;
 }
+
+function randomNumber(min, max) {
+return Math.floor(Math.random() * (max - min + 1) ) + min;
+} 
 
 const next = () => {
   Tone.start();

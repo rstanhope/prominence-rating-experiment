@@ -1,0 +1,93 @@
+[
+  {
+    "trialID": "filler6",
+    "version": "withinParticipantDesign",
+    "image": "candy.png",
+    "dialogueTurn1": "Have you had this candy before?",
+    "dialogueTurn2": "Yes, why?",
+    "dialogueTurn3": "I was wondering which flavor is better. What do you think?",
+    "targetSentence": "actually I've never tried the pineapple so I'm not sure",
+    "audio": "candy.mp3",
+    "targetWord1": 1,
+    "targetWord2": 6,
+    "order": 3
+  },
+  {
+    "trialID": "filler7",
+    "version": "withinParticipantDesign",
+    "image": "cookies.png",
+    "dialogueTurn1": "Those cookies look delicious.",
+    "dialogueTurn2": "Thanks! I tried a new recipe.",
+    "dialogueTurn3": "Are you going to decorate them?",
+    "targetSentence": "yes I'm going to use some sprinkles",
+    "audio": "cookies.mp3",
+    "targetWord1": 3,
+    "targetWord2": 5,
+    "order": 3
+  },
+  {
+    "trialID": "filler11",
+    "version": "withinParticipantDesign",
+    "image": "sandcastle.png",
+    "dialogueTurn1": "I’m almost done building this sand castle.",
+    "dialogueTurn2": "It looks done to me, what’s left?",
+    "dialogueTurn3": "It just needs some more detail. Right now it’s kind of boring.",
+    "targetSentence": "you could decorate it with shells or dig a moat around it",
+    "audio": "sandcastle.mp3",
+    "targetWord1": 6,
+    "targetWord2": 10,
+    "order": 3
+  },
+  {
+    "trialID": "filler3",
+    "version": "withinParticipantDesign",
+    "image": "boardgame.png",
+    "dialogueTurn1": "Do you want to play another round?",
+    "dialogueTurn2": "Sure!",
+    "dialogueTurn3": "What color do you want to be? Blue again?",
+    "targetSentence": "I'll switch it up for once and go with green",
+    "audio": "boardgame.mp3",
+    "targetWord1": 2,
+    "targetWord2": 10,
+    "order": 3
+  },
+  {
+    "trialID": "filler1",
+    "version": "withinParticipantDesign",
+    "image": "artmuseum.png",
+    "dialogueTurn1": "I haven’t been to an art museum in ages.",
+    "dialogueTurn2": "This was a great exhibition to see, then. There’s work from a variety of movements.",
+    "dialogueTurn3": "What’s your favorite piece here?",
+    "targetSentence": "I like the cubist painting on the right because it incorporates multiple perspectives",
+    "audio": "artmuseum.mp3",
+    "targetWord1": 4,
+    "targetWord2": 13,
+    "order": 3
+  },
+  {
+    "trialID": "filler8",
+    "version": "withinParticipantDesign",
+    "image": "costume.png",
+    "dialogueTurn1": "I can’t decide what to wear to the Halloween party tonight.",
+    "dialogueTurn2": "Do you want it to be scary?",
+    "dialogueTurn3": "I don’t really care, as long as it’s not uncomfortable to wear all night.",
+    "targetSentence": "that pumpkin mask seems comfortable so it might be a good choice",
+    "audio": "costume.mp3",
+    "targetWord1": 3,
+    "targetWord2": 12,
+    "order": 3
+  },
+  {
+    "trialID": "filler10",
+    "version": "withinParticipantDesign",
+    "image": "racinggame.png",
+    "dialogueTurn1": "I used to play that racing game all the time as a kid.",
+    "dialogueTurn2": "Me too! ",
+    "dialogueTurn3": "I liked that you could customize the cars.",
+    "targetSentence": "I always removed the bumper since it made the car lighter and faster",
+    "audio": "racinggame.mp3",
+    "targetWord1": 3,
+    "targetWord2": 11,
+    "order": 3
+  }  
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "trialID": "catch1",
+    "version": "withinParticipantDesign", 
+    "image": "checkeredbinder.png",
+    "dialogueTurn1": "Does Stella need anything else for the new school year?",
+    "dialogueTurn2": "Yes, something to keep their science worksheets in.",
+    "dialogueTurn3": "The polka dot binder is pretty cute.",
+    "targetSentence": "In the dialogue you just read, was a lunch box mentioned?",
+    "options": [{"label":"yes", "correct":false}, {"label":"no", "correct": true}, {"label": "not sure", "correct":false}]
+  },
+  {
+    "trialID": "catch2",
+    "version": "withinParticipantDesign",  
+    "image": "fudgeshake.png",
+    "dialogueTurn1": "I don't know what to order; everything looks so good.",
+    "dialogueTurn2": "Last time I ordered a strawberry sundae and it was delicious.",
+    "dialogueTurn3": "That sounds tasty, but it might be messy, and I'm wearing white.",
+    "targetSentence": "In the dialogue you just read, was a strawberry sundae mentioned?",
+    "options": [{"label":"yes", "correct":true}, {"label":"no", "correct": false}, {"label": "not sure", "correct":false}]
+   }
+]
