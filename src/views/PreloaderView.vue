@@ -137,7 +137,7 @@ async function loadWithinSubjectDesignList() {
   let masterList = [];
   order = shuffle(order);
   //TODO: save order to participant's Firebase record
-  
+
   for (let i = 0; i < order.length; i++) {
     //critical list
     let f = await fetch("critical_list" + order[i] + ".json");
@@ -167,12 +167,12 @@ async function loadWithinSubjectDesignList() {
       return null
     }
     //insert catch trials at controlled randomized positions
-    list.splice(randomNumber(2,4), 0, catchTrials[0]);
-    list.splice(randomNumber(9,13), 0, catchTrials[1]);
+    list.splice(randomNumber(2, 4), 0, catchTrials[0]);
+    list.splice(randomNumber(9, 13), 0, catchTrials[1]);
 
     masterList = masterList.concat(list)
-    
-    
+
+
     //insert breaks between blocks
     /*
     if (i < order.length - 1) {
@@ -183,6 +183,12 @@ async function loadWithinSubjectDesignList() {
 
   //save to pinia
   store.list = masterList;
+
+  //load practice list;
+  const fp = await fetch("list_practice.json");
+  let practiceList = await fp.json();
+  practiceList[0].isPractice = true;
+  store.list = practiceList.concat(store.list)
 
   //done loading list
   isLoading.value = false
@@ -201,8 +207,8 @@ function shuffle(array) {
 }
 
 function randomNumber(min, max) {
-return Math.floor(Math.random() * (max - min + 1) ) + min;
-} 
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
 const next = () => {
   Tone.start();
