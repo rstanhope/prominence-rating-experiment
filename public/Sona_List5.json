@@ -9,8 +9,8 @@
     "audio": "cat_1221.mp3",
     "targetWord1": 5,
     "targetWord2": 9
-   },
-   {
+  },
+  {
     "trialID": "pizza3n",
     "image": "pizza_3.png",
     "dialogueTurn1": "We’re next in line, do you know what you want?",
@@ -20,8 +20,8 @@
     "audio": "pizza_0208_1.mp3",
     "targetWord1": 5,
     "targetWord2": 12
-   },      
-   {
+  },      
+  {
     "trialID": "puzzle3y",
     "image": "puzzle_3.png",
     "dialogueTurn1": "Are you stumped? You look like you’re really concentrating.",
@@ -31,8 +31,8 @@
     "audio": "puzzle_0208.mp3",
     "targetWord1": 3,
     "targetWord2": 9
-   },
-   {
+  },
+  {
     "trialID": "sauce2n",
     "image": "sauce_2.png",
     "dialogueTurn1": "I made sandwiches, are you having one?",
@@ -42,8 +42,8 @@
     "audio": "sauce_0208_1.mp3",
     "targetWord1": 3,
     "targetWord2": 8
-   },
-   {
+  },
+  {
     "trialID": "tshirts2y",
     "image": "tshirts_2.png",
     "dialogueTurn1": "Are you going to buy anything?",
@@ -53,8 +53,8 @@
     "audio": "tshirts_0208.mp3",
     "targetWord1": 3,
     "targetWord2": 10
-   },
-   {
+  },
+  {
     "trialID": "yarnmi",
     "image": "yarn_many_indiscrete.png",
     "dialogueTurn1": "Can I help you find anything today?",
@@ -64,8 +64,8 @@
     "audio": "yarn_0208.mp3",
     "targetWord1": 3,
     "targetWord2": 10
-   },
-   {
+  },
+  {
     "trialID": "sc1_adj",
     "image": "sc1_adj.png",
     "dialogueTurn1": "I heard you totaled another vehicle.",

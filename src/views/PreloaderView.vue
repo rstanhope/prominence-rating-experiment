@@ -168,8 +168,8 @@ async function loadWithinSubjectDesignList() {
       return null
     }
     //insert catch trials at controlled randomized positions
-    list.splice(randomNumber(2, 4), 0, catchTrials[0]);
-    list.splice(randomNumber(9, 13), 0, catchTrials[1]);
+    list.splice(randomNumber(1, 3), 0, catchTrials[0]);
+    list.splice(randomNumber(6, 9), 0, catchTrials[1]);
 
     masterList = masterList.concat(list)
 

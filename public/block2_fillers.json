@@ -1,31 +1,5 @@
 [
   {
-    "trialID": "filler2",
-    "version": "withinParticipantDesign",
-    "image": "bird.png",
-    "dialogueTurn1": "You’re good at identifying birds, right?",
-    "dialogueTurn2": "I’ve read a field guide or two.",
-    "dialogueTurn3": "Do you think that’s an American Goldfinch outside?",
-    "targetSentence": "actually it looks like a lesser goldfinch because its back is totally black",
-    "audio": "bird.mp3",
-    "targetWord1": 10,
-    "targetWord2": 13,
-    "order": 2
-  },  
-  {
-    "trialID": "filler4",
-    "version": "withinParticipantDesign",
-    "image": "books.png",
-    "dialogueTurn1": "Have you read all of those books on your shelf?",
-    "dialogueTurn2": "Almost all of them. I just bought one yesterday, so I haven’t finished it yet.",
-    "dialogueTurn3": "Well, that’s impressive nonetheless. What’s the new one about?",
-    "targetSentence": "it's about an alien species making contact with earth",
-    "audio": "books.mp3",
-    "targetWord1": 4,
-    "targetWord2": 5,
-    "order": 2
-  }, 
-  {
     "trialID": "filler5",
     "version": "withinParticipantDesign",
     "image": "cafe.png",
@@ -75,19 +49,6 @@
     "audio": "racinggame.mp3",
     "targetWord1": 3,
     "targetWord2": 11,
-    "order": 2
-  },
-  {
-    "trialID": "filler12",
-    "version": "withinParticipantDesign",
-    "image": "stamps.png",
-    "dialogueTurn1": "I didn’t know you collected stamps.",
-    "dialogueTurn2": "I just started recently, when my dad gifted me some of his collection.",
-    "dialogueTurn3": "That’s cool! How old is your collection?",
-    "targetSentence": "most of it is from the eighties but the stamp with the fish is from nineteen fifty-six",
-    "audio": "stamps.mp3",
-    "targetWord1": 9,
-    "targetWord2": 15,
     "order": 2
   }
 ]

@@ -13,12 +13,12 @@
   {
     "trialID": "catch6",
     "version": "withinParticipantDesign",
-    "image": "movies.png",
-    "dialogueTurn1": "I’m glad we decided to see a movie tonight.",
-    "dialogueTurn2": "Me too! Which one should we get tickets for?",
-    "dialogueTurn3": "I’m open to anything. Let me guess, you want to see the horror film.",
+    "image": "moviescatch.png",
+    "dialogueTurn1": "Which movie should we get tickets for?",
+    "dialogueTurn2": "Well, looks like there's a horror film showing, and that's my favorite genre.",
+    "dialogueTurn3": "That sounds good to me.",
     "targetSentence": "Was a horror film mentioned in the conversation you just read?",
-    "options": [{"label":"yes", "correct":false}, {"label":"no", "correct":true}, {"label": "not sure", "correct":false}],
+    "options": [{"label":"yes", "correct":true}, {"label":"no", "correct":false}, {"label": "not sure", "correct":false}],
     "order": 3
   }  
 ]

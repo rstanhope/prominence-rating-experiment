@@ -50,44 +50,5 @@
     "targetWord1": 4,
     "targetWord2": 5,
     "order": 1
-  },
-  {
-    "trialID": "filler5",
-    "version": "withinParticipantDesign",
-    "image": "cafe.png",
-    "dialogueTurn1": "Have you ever been to this café before?",
-    "dialogueTurn2": "Yes, a couple of times, actually.",
-    "dialogueTurn3": "I enjoy their pastries; they're always so fresh.",
-    "targetSentence": "their almond croissants have the most delicious filling",
-    "audio": "cafe.mp3",
-    "targetWord1": 2,
-    "targetWord2": 6,
-    "order": 1
-  },
-  {
-    "trialID": "filler6",
-    "version": "withinParticipantDesign",
-    "image": "candy.png",
-    "dialogueTurn1": "Have you had this candy before?",
-    "dialogueTurn2": "Yes, why?",
-    "dialogueTurn3": "I was wondering which flavor is better. What do you think?",
-    "targetSentence": "actually I've never tried the pineapple so I'm not sure",
-    "audio": "candy.mp3",
-    "targetWord1": 1,
-    "targetWord2": 6,
-    "order": 1
-  },
-  {
-    "trialID": "filler7",
-    "version": "withinParticipantDesign",
-    "image": "cookies.png",
-    "dialogueTurn1": "Those cookies look delicious.",
-    "dialogueTurn2": "Thanks! I tried a new recipe.",
-    "dialogueTurn3": "Are you going to decorate them?",
-    "targetSentence": "yes I'm going to use some sprinkles",
-    "audio": "cookies.mp3",
-    "targetWord1": 3,
-    "targetWord2": 5,
-    "order": 1
   }
 ]
