@@ -37,7 +37,7 @@ const submit = () => {
     }else if(store.listFilename == "Sona_List6"){
         completionUrl = "https://northwestern-linguistics.sona-systems.com/webstudy_credit.aspx?experiment_id=172&credit_token=d94319beda6a44c096b134f85eeac243&survey_code=";
     }else if(store.listFilename == "within"){
-        completionUrl = "within-subject-design-completion-url-here";
+        completionUrl = "https://northwestern-linguistics.sona-systems.com/webstudy_credit.aspx?experiment_id=173&credit_token=1ddcecf6cafc4b129e517cd0e890a9bf&survey_code=";
     }
     
     completionUrl += store.pid;
