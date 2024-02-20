@@ -1,6 +1,6 @@
 const steps_default = [
     {
-        attachTo: { element: '#fullPictureDiv' }, content: { title: "1. At the beginning of every trial, you will see a picture that relates to the upcoming conversation. It may show objects, actions, or possibilities that are being discussed." }, options: {
+        attachTo: { element: '#fullPictureDiv' }, content: { title: "At the beginning of every trial, you will see a picture that relates to the upcoming conversation. It may show objects, actions, or possibilities that are being discussed." }, options: {
           hideButtons: {
             exit: true,
             previous: true,
@@ -84,7 +84,7 @@ const steps_default = [
 
 const steps_within = [
     {
-        attachTo: { element: '#fullPictureDiv' }, content: { title: "2. At the beginning of every trial, you will see a picture that relates to the upcoming conversation. It may show objects, actions, or possibilities that are being discussed." }, options: {
+        attachTo: { element: '#fullPictureDiv' }, content: { title: "At the beginning of every trial, you will see a picture that relates to the upcoming conversation. It may show objects, actions, or possibilities that are being discussed." }, options: {
           hideButtons: {
             exit: true,
             previous: true,
