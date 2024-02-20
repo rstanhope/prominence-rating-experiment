@@ -93,7 +93,7 @@ const steps_within = [
         }
       },
       {
-        attachTo: { element: '#fullPictureNextBtn' }, content: { title: "Click 'NEXT' to view the conversation" }, options: {
+        attachTo: { element: '#fullPictureNextBtn' }, content: { title: "Sometimes, the picture will be similar to one you've seen earlier in the study, but you won't see the same picture twice. Look carefully, since the pictures provide context for the conversations that follow. nClick 'NEXT' to view the conversation" }, options: {
           hideButtons: {
             exit: true,
             previous: true,
