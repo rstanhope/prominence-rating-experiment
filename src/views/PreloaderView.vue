@@ -17,6 +17,7 @@ import { useRouter, useRoute } from "vue-router";
 import * as Tone from 'tone';
 import Swal from "sweetalert2";
 import { getDatabase, ref as dbRef, child, get } from "firebase/database";
+import { steps_default, steps_within } from "./steps.js";
 
 const store = useStore();
 const router = useRouter();
@@ -121,6 +122,9 @@ async function loadAcrossSubjectDesignList(listToLoad) {
     //prepend practice list to regular list
     store.list = practiceList.concat(store.list)
 
+    //practice onboarding steps
+    store.practiceSteps = steps_default;
+
     //done loading list
     isLoading.value = false
   } catch (error) {
@@ -190,6 +194,9 @@ async function loadWithinSubjectDesignList() {
   let practiceList = await fp.json();
   practiceList[0].isPractice = true;
   store.list = practiceList.concat(store.list)
+
+  //practice onboarding steps
+  store.practiceSteps = steps_within;
 
   //done loading list
   isLoading.value = false
