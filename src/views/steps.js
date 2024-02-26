@@ -5,6 +5,9 @@ const steps_default = [
             exit: true,
             previous: true,
             next: false
+          },
+          popper: {
+            placement: 'right'
           }
         }
       },
@@ -89,6 +92,9 @@ const steps_within = [
             exit: true,
             previous: true,
             next: false
+          },
+          popper: {
+            placement: 'right'
           }
         }
       },
