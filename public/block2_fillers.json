@@ -7,7 +7,7 @@
     "dialogueTurn2": "Yes, a couple of times, actually.",
     "dialogueTurn3": "I enjoy their pastries; they're always so fresh.",
     "targetSentence": "their almond croissants have the most delicious filling",
-    "audio": "cafe.mp3",
+    "audio": "cafe_ms.mp3",
     "targetWord1": 2,
     "targetWord2": 6,
     "order": 2
@@ -20,7 +20,7 @@
     "dialogueTurn2": "Do you want it to be scary?",
     "dialogueTurn3": "I don’t really care, as long as it’s not uncomfortable to wear all night.",
     "targetSentence": "that pumpkin mask seems comfortable so it might be a good choice",
-    "audio": "costume.mp3",
+    "audio": "costume_ms.mp3",
     "targetWord1": 3,
     "targetWord2": 12,
     "order": 2
@@ -33,7 +33,7 @@
     "dialogueTurn2": "Me too! Which one should we get tickets for?",
     "dialogueTurn3": "I’m open to anything. Let me guess, you want to see the horror film.",
     "targetSentence": "surprisingly I was actually thinking about the superhero one",
-    "audio": "movies.mp3",
+    "audio": "movies_ms.mp3",
     "targetWord1": 8,
     "targetWord2": 9,
     "order": 2
@@ -46,7 +46,7 @@
     "dialogueTurn2": "Me too! ",
     "dialogueTurn3": "I liked that you could customize the cars.",
     "targetSentence": "I always removed the bumper since it made the car lighter and faster",
-    "audio": "racinggame.mp3",
+    "audio": "racinggame_ms.mp3",
     "targetWord1": 3,
     "targetWord2": 11,
     "order": 2

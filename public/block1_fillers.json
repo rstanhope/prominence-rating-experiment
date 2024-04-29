@@ -7,7 +7,7 @@
     "dialogueTurn2": "This was a great exhibition to see, then. There’s work from a variety of movements.",
     "dialogueTurn3": "What’s your favorite piece here?",
     "targetSentence": "I like the cubist painting on the right because it incorporates multiple perspectives",
-    "audio": "artmuseum.mp3",
+    "audio": "artmuseum_ms.mp3",
     "targetWord1": 4,
     "targetWord2": 13,
     "order": 1
@@ -20,7 +20,7 @@
     "dialogueTurn2": "I’ve read a field guide or two.",
     "dialogueTurn3": "Do you think that’s an American Goldfinch outside?",
     "targetSentence": "actually it looks like a lesser goldfinch because its back is totally black",
-    "audio": "bird.mp3",
+    "audio": "bird_ms.mp3",
     "targetWord1": 10,
     "targetWord2": 13,
     "order": 1
@@ -33,7 +33,7 @@
     "dialogueTurn2": "Sure!",
     "dialogueTurn3": "What color do you want to be? Blue again?",
     "targetSentence": "I'll switch it up for once and go with green",
-    "audio": "boardgame.mp3",
+    "audio": "boardgame_ms.mp3",
     "targetWord1": 2,
     "targetWord2": 10,
     "order": 1
@@ -46,7 +46,7 @@
     "dialogueTurn2": "Almost all of them. I just bought one yesterday, so I haven’t finished it yet.",
     "dialogueTurn3": "Well, that’s impressive nonetheless. What’s the new one about?",
     "targetSentence": "it's about an alien species making contact with earth",
-    "audio": "books.mp3",
+    "audio": "books_ms.mp3",
     "targetWord1": 4,
     "targetWord2": 5,
     "order": 1

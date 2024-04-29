@@ -104,7 +104,10 @@ const steps_within = [
             exit: true,
             previous: true,
             next: true
-          }
+          },
+          popper: {
+            placement: 'right'
+          }          
         }
       },  
       {
